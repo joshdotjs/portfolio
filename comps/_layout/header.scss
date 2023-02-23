@@ -11,7 +11,7 @@ header {
     padding-right: 0;
   }; 
 
-  > div {
+  > div { // container
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -19,8 +19,20 @@ header {
     @include max-width;
 
     .logo {
-      height: 40px;
-      
+      height: 40px;     
+    }
+
+    .navlinks,
+    .socials {
+      display: flex;
+
+      > li {
+        &:not(:last-child) {
+          background: red;
+          margin-right: 1rem;
+        }
+      }
+
     }
   }
 }
