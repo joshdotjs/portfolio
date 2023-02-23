@@ -28,6 +28,8 @@ body {
   }
 
   main {
+    display: grid;
+    place-items: center;
   }
 
   footer {
