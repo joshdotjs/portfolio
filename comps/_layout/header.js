@@ -20,9 +20,11 @@ export default function Header() {
       </Head>
 
       <header>
-        <div className="logo">logo</div>
-        <div className="navlinks">navlinks</div>
-        <div className="socials">social</div>
+        <div>
+          <div className="logo">logo</div>
+          <div className="navlinks">navlinks</div>
+          <div className="socials">social</div>
+        </div>
       </header>
     </>
   );

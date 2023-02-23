@@ -1,3 +1,7 @@
+@forward 'css/partials/vars-css';
+@forward 'css/partials/fonts';
+
+
 *, *::before, *::after {
   box-sizing: border-box;
 }
@@ -28,8 +32,6 @@ body {
   }
 
   main {
-    display: grid;
-    place-items: center;
   }
 
   footer {

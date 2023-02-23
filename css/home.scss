@@ -1,0 +1,19 @@
+@use './partials/mixins' as *;
+@use './partials/vars' as *;
+
+// ==============================================
+
+main {
+  @include xl {
+    padding: 0 $pad;
+  };
+
+  #hero {
+    
+    background: red;
+    
+    @include max-width;
+
+    padding: 0 $pad;
+  }
+}

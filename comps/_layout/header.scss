@@ -1,4 +1,22 @@
+@use 'css/partials/mixins' as *;
+@use 'css/partials/vars' as *;
+
+// ==============================================
+
 header {
-  display: flex;
-  justify-content: space-between;
+  padding: 0 $pad;
+
+  @include xl {
+    padding: 0;
+    // > div {
+    //   padding: 0 $pad;
+    // }
+  }; 
+
+  > div {
+    display: flex;
+    justify-content: space-between;
+    background: orange;
+    @include max-width;
+  }
 }
