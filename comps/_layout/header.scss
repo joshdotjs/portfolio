@@ -19,7 +19,8 @@ header {
     @include max-width;
 
     .logo {
-      height: 40px;     
+      height: 40px;
+      cursor: pointer;
     }
 
     .navlinks,
@@ -36,10 +37,28 @@ header {
         }
 
         &:not(:last-child) {
-          margin-right: 1rem;
+          margin-right: 1.75rem;
         }
       }
 
+    }
+
+    .navlinks {
+      cursor: pointer;
+
+      .navlink {
+        $offset: 2px;
+        $padding-bottom: calc(2 * #{$offset});
+
+        transition: border-bottom 0.25s ease-in-out;
+        border-bottom: $offset solid transparent;
+        margin-bottom: calc(-1 * calc(#{$offset} + #{$padding-bottom}));
+        padding-bottom: $padding-bottom;
+
+        &.active {
+          border-bottom: $offset solid white;
+        }
+      }
     }
   }
 }

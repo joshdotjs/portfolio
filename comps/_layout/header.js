@@ -1,8 +1,28 @@
+import { useState } from 'react';
+
 import Head from 'next/head';
 
 // ==============================================
 
+const Navlink = ({idx, active, title, onClick}) => {
+  return (
+    <li 
+      className={`navlink ${idx === active ? 'active' : ''}`}
+      onClick={onClick}
+    >
+      {title}
+    </li>
+  );
+};
+
+// ==============================================
+
 export default function Header() {
+
+  // --------------------------------------------
+
+  const [active, setActive] = useState(0);
+
 
   // --------------------------------------------
 
@@ -25,9 +45,9 @@ export default function Header() {
           <img className="logo" src="/favicon.svg" />
           
           <ul className="navlinks">
-            <li className="navlink">Home</li>
-            <li className="navlink">Portfolio</li>
-            <li className="navlink">Contact</li>
+            <Navlink idx={0} active={active} title="Home"      onClick={() => setActive(0)} />
+            <Navlink idx={1} active={active} title="Portfolio" onClick={() => setActive(1)} />
+            <Navlink idx={2} active={active} title="Contact"   onClick={() => setActive(2)} />
           </ul>
           
           <ul className="socials">
