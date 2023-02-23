@@ -21,7 +21,7 @@ export default function Header() {
 
       <header>
         <div>
-          <div className="logo">logo</div>
+          <img className="logo" src="/favicon.svg" />
           <div className="navlinks">navlinks</div>
           <div className="socials">social</div>
         </div>

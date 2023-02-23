@@ -9,11 +9,8 @@ main {
   };
 
   #hero {
-    
-    background: red;
-    
+    background: red;   
     @include max-width;
-
     padding: 0 $pad;
   }
 }

@@ -8,13 +8,13 @@ export default function Home() {
       
       <div id="hero">
         <div className="left">
-          <div class="super-title stagger1">
+          <div className="super-title stagger1">
             Full Stack Web Developer
           </div>
-          <div class="title stagger1">
+          <div className="title stagger1">
             Josh Holloway
           </div>
-          <div class="sub-title stagger1">
+          <div className="sub-title stagger1">
             JavaScript | React | Node | Laravel
           </div>
         </div>
