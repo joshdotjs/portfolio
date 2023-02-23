@@ -1,0 +1,13 @@
+{
+  "files.exclude": {
+    // "package.json": true,
+    // "jsconfig.json": true,
+    "next.config.js": true,
+    // "**/*.css": true,
+    // "**/*.css.map": true,
+    "package-lock.json": true,
+    "node_modules": true,
+    ".gitignore": true,
+    ".next": true,
+  }
+}
