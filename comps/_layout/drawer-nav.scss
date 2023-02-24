@@ -29,18 +29,20 @@
     // overflowY: 'scroll',
     display: flex;
     width: 200px;
-    background: black;
+    background: lightgreen;
 
     ul.navlinks {
       position: absolute;
       left: 50%;
       transform: translateX(-50%);
       top: 40%;
-      background: orange;
+      // background: orange;
       
       cursor: pointer;
       
       li.navlink {
+        width: fit-content;
+        text-align: center;
         $anim: 0.2s ease-in-out;
         $offset: 2px;
         $padding-bottom: calc(1.5 * #{$offset});
@@ -64,6 +66,7 @@
         &:not(:last-child) {
           margin-bottom: 1.75rem;
         }
+        
       }
     }
   }
