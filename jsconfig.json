@@ -2,6 +2,9 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
+      // "context/*": ["context/*"],
+      // "util/*": ["util/*"],
+      "pages/*": ["pages/*"],
       "comps/*": ["comps/*"],
       "css/*": ["css/*"],
     }
