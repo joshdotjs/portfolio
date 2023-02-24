@@ -61,10 +61,7 @@
 
           $offset: 2px;
           $padding-bottom: calc(1.5 * #{$offset});
-          
-
           border-bottom: $offset solid transparent;
-          // margin-bottom: calc(-1 * calc(#{$offset} + #{$padding-bottom}));
           padding-bottom: $padding-bottom;
           transition: 
             border-bottom 1.2 ease,
@@ -73,9 +70,6 @@
 
           &.active {
             border-bottom: $offset solid white;
-            color: white;
-          }
-          &:hover {
             color: white;
           }
         }

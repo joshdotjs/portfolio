@@ -52,13 +52,14 @@ const NavDrawer = ({ active_page, setActivePage }) => {
   // --------------------------------------------
 
   openDrawer = () => {
+    if (tl_ref.current)
+      tl_ref.current.revert();
+
     const tl = gsap.timeline();   
     tl.add(showOverlay());
     tl.add(slideDrawer(), "<=");
-    tl.add(staggerNavlinks(), '=-0.175');
+    tl.add(staggerNavlinks(), '=-0.2');
     
-    if (tl_ref.current)
-      tl_ref.current.revert();
     tl_ref.current = tl;
   };
 
