@@ -1,17 +1,20 @@
 import { useState } from 'react';
+import Link from 'next/link';
 
 import Head from 'next/head';
 import NavDrawer, { openDrawer } from './drawer-nav';
 
 // ==============================================
 
-const Navlink = ({idx, active, onClick, children}) => {
+const Navlink = ({idx, active, onClick, href, children}) => {
   return (
     <li 
       className={`navlink ${idx === active ? 'active' : ''}`}
       onClick={onClick}
     >
-      { children }
+      <Link href={href}>
+        { children }
+      </Link>
     </li>
   );
 };
@@ -45,9 +48,9 @@ export default function Header() {
           <img className="logo" src="/favicon.svg" />
           
           <ul className="navlinks">
-            <Navlink idx={0} active={active_page} onClick={() => setActivePage(0)}>Home</Navlink>
-            <Navlink idx={1} active={active_page} onClick={() => setActivePage(1)}>Portfolio</Navlink>
-            <Navlink idx={2} active={active_page} onClick={() => setActivePage(2)}>Contact</Navlink>
+            <Navlink idx={0} active={active_page} onClick={() => setActivePage(0)} href="/">Home</Navlink>
+            <Navlink idx={1} active={active_page} onClick={() => setActivePage(1)} href="/portfolio">Portfolio</Navlink>
+            <Navlink idx={2} active={active_page} onClick={() => setActivePage(2)} href="/contact">Contact</Navlink>
           </ul>
           
           <ul className="socials">

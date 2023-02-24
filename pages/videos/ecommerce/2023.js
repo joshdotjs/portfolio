@@ -1,5 +1,3 @@
-import Layout from "comps/_layout/_layout";
-
 // ==============================================
 
 export default function TwentyTwentyThree() {
@@ -7,7 +5,7 @@ export default function TwentyTwentyThree() {
   // --------------------------------------------
 
   return (
-    <Layout>
+    <>
       <section>
         <iframe 
           width="560" height="315" 
@@ -17,7 +15,7 @@ export default function TwentyTwentyThree() {
           allowfullscreen
           ></iframe>
       </section>
-    </Layout>
+    </>
   );
 
   // --------------------------------------------

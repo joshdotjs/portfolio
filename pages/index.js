@@ -1,10 +1,8 @@
-import Layout from "comps/_layout/_layout";
-
 // ==============================================
 
 export default function Home() {
   return (
-    <Layout>
+    <>
       
       <div id="hero" className="hero-gutters">
         <div className="left">
@@ -20,7 +18,7 @@ export default function Home() {
         </div>
       </div>
 
-    </Layout>
+    </>
   );
 }
 
