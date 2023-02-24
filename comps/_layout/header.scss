@@ -49,12 +49,12 @@ header {
 
     }
 
+    $anim: 0.2s ease-in-out;
     .navlinks {
       cursor: pointer;
 
       .navlink {
         $offset: 2px;
-        $anim: 0.2s ease-in-out;
         $padding-bottom: calc(1.5 * #{$offset});
 
         border-bottom: $offset solid transparent;
@@ -74,12 +74,22 @@ header {
         }
       }
     }
+    .socials {
+      .social svg {
+        transition: color $anim;
+        &:hover {
+          color: white;
+        }
+      }
+    }
 
     #hamburger {
+      cursor: pointer;
       display: flex;
       @include sm {
         display: none;
       }
+      
     }
   }
 }
