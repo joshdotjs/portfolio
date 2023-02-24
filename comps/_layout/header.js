@@ -1,8 +1,11 @@
-import { useState } from 'react';
+import { useState, Fragment  } from 'react';
+import { useRouter } from 'next/router';
 import Link from 'next/link';
 
 import Head from 'next/head';
 import NavDrawer, { openDrawer } from './drawer-nav';
+
+import routes from 'data/routes';
 
 // ==============================================
 
@@ -24,7 +27,9 @@ export default function Header() {
 
   // --------------------------------------------
 
-  const [active_page, setActivePage] = useState(0);
+  const router = useRouter();
+
+  const [active_page, setActivePage] = useState(['/', '/portfolio', '/contact'].indexOf(router.pathname));
 
   // --------------------------------------------
 
@@ -47,9 +52,15 @@ export default function Header() {
           <img className="logo" src="/favicon.svg" />
           
           <ul className="navlinks">
-            <Navlink idx={0} active={active_page} onClick={() => setActivePage(0)} href="/">Home</Navlink>
-            <Navlink idx={1} active={active_page} onClick={() => setActivePage(1)} href="/portfolio">Portfolio</Navlink>
-            <Navlink idx={2} active={active_page} onClick={() => setActivePage(2)} href="/contact">Contact</Navlink>
+            {routes.map((route, idx) => {
+              const { href, name } = route;
+              const key = `header-navlink-${idx}`;
+              return (
+                <Fragment key={key}>
+                  <Navlink {...{ href, idx }} active={active_page} onClick={() => setActivePage(idx)}>{ name }</Navlink>
+                </Fragment>
+              );
+            })}
           </ul>
           
           <ul className="socials">

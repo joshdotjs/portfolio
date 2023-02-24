@@ -43,9 +43,9 @@
         
         // background: green;
         width: 100px;
-        height: 40px;
+        height: 50px;
         display: flex;
-        align-items: flex-end;
+        align-items: center;
         overflow: hidden;
         &:not(:last-child) {
           margin-bottom: 1rem;
@@ -67,8 +67,8 @@
           // margin-bottom: calc(-1 * calc(#{$offset} + #{$padding-bottom}));
           padding-bottom: $padding-bottom;
           transition: 
-          border-bottom 0.2 ease,
-          color 0.125 ease
+            border-bottom 1.2 ease,
+            color 1.125 ease
           ;
 
           &.active {

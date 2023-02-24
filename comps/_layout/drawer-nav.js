@@ -1,7 +1,9 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef, Fragment } from 'react';
 import { createPortal } from 'react-dom';
 import Link from 'next/link';
 import { gsap } from 'gsap';
+
+import routes from 'data/routes';
 
 
 // ==============================================
@@ -113,6 +115,7 @@ const NavDrawer = ({ active_page, setActivePage }) => {
       y: '0px',
       stagger: 0.1,
       ease: "back.out(2.0)",
+      duration: 0.5,
     });
 
     return tl;
@@ -135,9 +138,15 @@ const NavDrawer = ({ active_page, setActivePage }) => {
         <aside ref={container_ref}>
 
           <ul className="navlinks">
-            <Navlink idx={0} active={active_page} onClick={() => setActivePage(0)} href="/"          refs={navlink_refs}>Home</Navlink>
-            <Navlink idx={1} active={active_page} onClick={() => setActivePage(1)} href="/portfolio" refs={navlink_refs}>Portfolio</Navlink>
-            <Navlink idx={2} active={active_page} onClick={() => setActivePage(2)} href="/contact"   refs={navlink_refs}>Contact</Navlink>
+          {routes.map((route, idx) => {
+              const { href, name } = route;
+              const key = `header-navlink-${idx}`;
+              return (
+                <Fragment key={key}>
+                  <Navlink {...{ href, idx }} active={active_page} onClick={() => setActivePage(idx)} refs={navlink_refs}>{ name }</Navlink>
+                </Fragment>
+              );
+            })}
           </ul>
         </aside>
       </>, 
