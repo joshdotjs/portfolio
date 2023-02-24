@@ -31,8 +31,7 @@
     width: 200px;
     background: lightgreen;
 
-    ul.navlinks {
-      position: absolute;
+    ul.navlinks { position: absolute;
       left: 50%;
       transform: translateX(-50%);
       top: 40%;
@@ -41,30 +40,39 @@
       cursor: pointer;
       
       li.navlink {
-        width: fit-content;
-        text-align: center;
-        $anim: 0.2s ease-in-out;
-        $offset: 2px;
-        $padding-bottom: calc(1.5 * #{$offset});
 
-        border-bottom: $offset solid transparent;
-        margin-bottom: calc(-1 * calc(#{$offset} + #{$padding-bottom}));
-        padding-bottom: $padding-bottom;
-        transition: 
-          border-bottom $anim,
-          color $anim
-        ;
-
-        &.active {
-          border-bottom: $offset solid white;
-          color: white;
-        }
-        &:hover {
-          color: white;
-        }
-
+        background: green;
+        width: 100px;
+        height: 40px;
+        display: flex;
+        align-items: flex-end;
         &:not(:last-child) {
           margin-bottom: 1.75rem;
+        }
+
+
+        &__interior { 
+          width: fit-content;
+          text-align: center;
+          $anim: 0.2s ease-in-out;
+          $offset: 2px;
+          $padding-bottom: calc(1.5 * #{$offset});
+
+          border-bottom: $offset solid transparent;
+          margin-bottom: calc(-1 * calc(#{$offset} + #{$padding-bottom}));
+          padding-bottom: $padding-bottom;
+          transition: 
+            border-bottom $anim,
+            color $anim
+          ;
+
+          &.active {
+            border-bottom: $offset solid white;
+            color: white;
+          }
+          &:hover {
+            color: white;
+          }
         }
         
       }
