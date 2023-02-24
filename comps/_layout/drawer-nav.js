@@ -11,7 +11,7 @@ const Navlink = ({idx, active, onClick, refs, children}) => {
       className="navlink"
     >
       <div 
-        refs={el => refs.current[idx] = el}
+        ref={el => refs.current[idx] = el}
         className={`navlink__interior ${idx === active ? 'active' : ''}`}
         onClick={onClick}
       >
@@ -50,21 +50,15 @@ const NavDrawer = ({ active_page, setActivePage }) => {
   openDrawer = () => {
 
     console.log('openDrawer()');
-
-    
     
     if (tl_ref.current) // if cart is still open then reset timeline before opening. Fixes bug where timeline is overwritten with no animation if cart is already open and added to. Cart should always be closed when adding new item, but just in case this ensures the cart is closable if added to when already open if app is in some unforseen state.
     tl_ref.current.revert();
     
     const tl = gsap.timeline();
     
-    
     tl.add(showOverlay());
     tl.add(slideDrawer(), "<=");
-
-    // tl.to(navlink_refs.current, {
-    //   x: 100,
-    // });
+    tl.add(staggerNavlinks(), '=-0.175');
 
     tl_ref.current = tl;
   };
@@ -72,7 +66,6 @@ const NavDrawer = ({ active_page, setActivePage }) => {
   // --------------------------------------------
 
   closeDrawer = () => {
-    hideOverlay();
     tl_ref.current?.reverse();
   };
 
@@ -102,6 +95,10 @@ const NavDrawer = ({ active_page, setActivePage }) => {
       onStart: () => {
         document.body.style.overflow = "hidden"; // don't scroll stuff underneath the modal
       },
+      onReverseComplete: () => {
+        ref.style.display = 'none';
+        document.body.style.overflow = "overlay"; // custom scrollbar overlay        
+      },
     });
 
     return tl;
@@ -109,15 +106,24 @@ const NavDrawer = ({ active_page, setActivePage }) => {
 
   // --------------------------------------------
 
-  const hideOverlay = () => {
-    const ref = overlay_ref.current;
-    gsap.to(ref, { 
-      opacity: 0,
-       duration: 0.3, 
-       onComplete: () => {
-        ref.style.display = 'none';
-        document.body.style.overflow = "overlay"; // custom scrollbar overlay
-      }});
+  const staggerNavlinks = () => {
+    const refs = navlink_refs.current;
+    const tl = gsap.timeline();
+
+    tl.fromTo(refs,  {
+      y: '50px',
+    }, {
+      y: '0px',
+      stagger: 0.1,
+      ease: "back.out(2.0)",
+    });
+
+    // tl.to(refs,  {
+    //   y: '-10px',
+    //   stagger: 0.15,
+    // }, "<=0.1");
+
+    return tl;
   };
 
   // --------------------------------------------

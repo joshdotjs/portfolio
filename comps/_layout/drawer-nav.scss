@@ -41,13 +41,14 @@
       
       li.navlink {
 
-        background: green;
+        // background: green;
         width: 100px;
         height: 40px;
         display: flex;
         align-items: flex-end;
+        overflow: hidden;
         &:not(:last-child) {
-          margin-bottom: 1.75rem;
+          margin-bottom: 1rem;
         }
 
 
