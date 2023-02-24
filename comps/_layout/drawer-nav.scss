@@ -37,10 +37,10 @@
       top: 40%;
       // background: orange;
       
-      cursor: pointer;
       
-      li.navlink {
-
+      
+      .navlink {
+        
         // background: green;
         width: 100px;
         height: 40px;
@@ -53,18 +53,22 @@
 
 
         &__interior { 
+          // background: red;
+          cursor: pointer;
+
           width: fit-content;
           text-align: center;
-          $anim: 0.2s ease-in-out;
+
           $offset: 2px;
           $padding-bottom: calc(1.5 * #{$offset});
+          
 
           border-bottom: $offset solid transparent;
-          margin-bottom: calc(-1 * calc(#{$offset} + #{$padding-bottom}));
+          // margin-bottom: calc(-1 * calc(#{$offset} + #{$padding-bottom}));
           padding-bottom: $padding-bottom;
           transition: 
-            border-bottom $anim,
-            color $anim
+          border-bottom 0.2 ease,
+          color 0.125 ease
           ;
 
           &.active {

@@ -3,7 +3,8 @@
 
 // ==============================================
 
-header {
+header { 
+  width: 100vw;
 
   > div { // container
     display: flex;
@@ -22,7 +23,8 @@ header {
         display: flex;
       }
 
-      > li {
+      .navlink, 
+      .social {
         a {
           display: flex;
           svg { 
@@ -35,28 +37,26 @@ header {
           margin-right: 1.75rem;
         }
       }
-
     }
 
-    $anim: 0.2s ease-in-out;
+    
     ul.navlinks {
-      cursor: pointer;
-
-      li.navlink {
+      
+      a.navlink {
+        cursor: pointer;
         $offset: 2px;
         $padding-bottom: calc(1.5 * #{$offset});
 
         border-bottom: $offset solid transparent;
         margin-bottom: calc(-1 * calc(#{$offset} + #{$padding-bottom}));
         padding-bottom: $padding-bottom;
-        transition: 
-          border-bottom $anim,
-          color $anim
-        ;
+
+        transition: all 0.2s ease;
 
         &.active {
           border-bottom: $offset solid white;
           color: white;
+          
         }
         &:hover {
           color: white;
@@ -64,8 +64,8 @@ header {
       }
     }
     ul.socials {
-      li.social svg {
-        transition: color $anim;
+      a.social svg {
+        transition: color 0.125 ease;
         &:hover {
           color: white;
         }
