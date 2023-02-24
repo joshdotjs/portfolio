@@ -5,13 +5,13 @@ import NavDrawer, { openDrawer } from './drawer-nav';
 
 // ==============================================
 
-const Navlink = ({idx, active, title, onClick}) => {
+const Navlink = ({idx, active, onClick, children}) => {
   return (
     <li 
       className={`navlink ${idx === active ? 'active' : ''}`}
       onClick={onClick}
     >
-      {title}
+      { children }
     </li>
   );
 };
@@ -22,7 +22,7 @@ export default function Header() {
 
   // --------------------------------------------
 
-  const [active, setActive] = useState(0);
+  const [active_page, setActivePage] = useState(0);
 
   // --------------------------------------------
 
@@ -45,9 +45,9 @@ export default function Header() {
           <img className="logo" src="/favicon.svg" />
           
           <ul className="navlinks">
-            <Navlink idx={0} active={active} title="Home"      onClick={() => setActive(0)} />
-            <Navlink idx={1} active={active} title="Portfolio" onClick={() => setActive(1)} />
-            <Navlink idx={2} active={active} title="Contact"   onClick={() => setActive(2)} />
+            <Navlink idx={0} active={active_page} onClick={() => setActivePage(0)}>Home</Navlink>
+            <Navlink idx={1} active={active_page} onClick={() => setActivePage(1)}>Portfolio</Navlink>
+            <Navlink idx={2} active={active_page} onClick={() => setActivePage(2)}>Contact</Navlink>
           </ul>
           
           <ul className="socials">
@@ -76,7 +76,7 @@ export default function Header() {
         </div>
       </header>
 
-      <NavDrawer />
+      <NavDrawer {...{active_page, setActivePage}} />
     </>
   );
 

@@ -5,8 +5,22 @@ import { gsap } from 'gsap';
 
 // ==============================================
 
+const Navlink = ({idx, active, onClick, mb, children}) => {
+  return (
+    <li 
+      className={`navlink ${idx === active ? 'active' : ''}`}
+      onClick={onClick}
+      style={{ marginBottom: mb ? '1rem' : '' }}
+    >
+      { children }
+    </li>
+  );
+};
+
+// ==============================================
+
 let openDrawer, closeDrawer;
-const NavDrawer = () => {
+const NavDrawer = ({ active_page, setActivePage }) => {
 
   // --------------------------------------------
 
@@ -82,44 +96,23 @@ const NavDrawer = () => {
     mounted 
     ? 
     createPortal(
-      <div>
+      <>
         <div // Blur Overlay
+          className="blur-overlay"
           ref={overlay_ref}
-          style={{ 
-            position: 'fixed',
-            top: 0,
-            left: 0,
-            width: '100vw',
-            height: '100vh',
-            display: 'none',
-            opacity: 0,     
-            background: 'rgba(0, 0, 0, 0.65)',
-            backdropFilter: 'blur(5px)', // I think this is not animating the blur!  I think a single blur is computed and then the opacity on it is animated - which is efficient.  I think animating a blur causes a diffrent blur to be computed for each frame of the animation with each one slightly more blurred than the previous.
-            WebkitBackdropFilter: 'blur(5px)',
-            zIndex: '99'
-
-          }}
           onClick={() => closeDrawer()}
         >  
         </div>
 
-        <aside 
-          ref={container_ref}
-          style={{ position: 'fixed',
-            top: 0,
-            background: 'white',
-            height: '100vh',
-            zIndex: 100,
-            padding: 0,
-            margin: 0,
-            left: 0,
-            transform: 'translateX(-100%)',
-            overflowY: 'scroll'
-        }}
-        >
-          DRAWER
+        <aside ref={container_ref}>
+
+          <ul className="navlinks">
+            <Navlink idx={0} active={active_page} title="Home"      onClick={() => setActivePage(0)}>Home</Navlink>
+            <Navlink idx={1} active={active_page} title="Portfolio" onClick={() => setActivePage(1)}>Portfolio</Navlink>
+            <Navlink idx={2} active={active_page} title="Contact"   onClick={() => setActivePage(2)}>Contact</Navlink>
+          </ul>
         </aside>
-      </div>, 
+      </>, 
       document.querySelector('#portal-nav-drawer'))
     : 
     null
