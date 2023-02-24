@@ -13,6 +13,7 @@ body {
 
   header {
     background: lightgreen;
+    z-index: 10; // .wite: 5, header/footer: 10
   }
 
   main {
@@ -20,5 +21,6 @@ body {
 
   footer {
     background: lightblue;
+    z-index: 10; // .wite: 5, header/footer: 10
   }
 }
