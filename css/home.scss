@@ -10,7 +10,5 @@ main {
 
   #hero {
     background: red;   
-    @include max-width;
-    padding: 0 $gutter;
   }
 }

@@ -1,0 +1,28 @@
+@use 'css/partials/mixins' as *;
+@use 'css/partials/vars' as *;
+
+// ==============================================
+
+header {
+  padding: 
+    calc(0.75 * #{$pad}) 
+    $gutter
+  ;
+
+  @include xl {
+    padding-left: 0;
+    padding-right: 0;
+  }; 
+
+  > div { // container
+    background: orange;
+    @include max-width;
+  }
+}
+
+// ==============================================
+
+.hero-gutters {
+  @include max-width;
+  padding: 0 $gutter;
+}

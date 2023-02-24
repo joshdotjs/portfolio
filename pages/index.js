@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <Layout>
       
-      <div id="hero">
+      <div id="hero" className="hero-gutters">
         <div className="left">
           <div className="super-title stagger1">
             Full Stack Web Developer

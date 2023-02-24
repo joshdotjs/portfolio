@@ -1,27 +1,10 @@
 @forward 'css/partials/vars-css';
 @forward 'css/partials/reset';
 @forward 'css/partials/fonts';
+@forward 'css/partials/sticky-footer';
+@forward 'css/partials/gutters';
 
-*, *::before, *::after {
-  box-sizing: border-box;
-}
 
-/* ========================================= */
-/* ----------- "Sticky"-Footer ------------- */
-/* ╲╱ ╲╱ ╲╱ ╲╱ ╲╱ ╲╱ ╲╱ ╲╱ ╲╱ ╲╱ ╲╱ ╲╱ ╲╱ ╲╱ */
-html {            height: 100%;   background: yellow;
-  body {          height: 100%;   background: orange;
-    #__next { min-height: 100%;   background:  darkorchid;
-      display: flex;
-      flex-direction: column;
-      main { flex-grow: 1; }            // method 2
-      footer{ justify-self: flex-end; } // method 2 (method-1: margin-top: auto, method-3: grid)
-    }
-  }
-}
-/* ╱╲ ╱╲ ╱╲ ╱╲ ╱╲ ╱╲ ╱╲ ╱╲ ╱╲ ╱╲ ╱╲ ╱╲ ╱╲ ╱╲ */
-/* ^^^^^^^^^^^ "Sticky"-Footer ^^^^^^^^^^^^^ */
-/* ========================================= */
 
 
 body {

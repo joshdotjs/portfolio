@@ -4,22 +4,11 @@
 // ==============================================
 
 header {
-  padding: 
-    calc(0.75 * #{$pad}) 
-    $gutter
-  ;
-
-  @include xl {
-    padding-left: 0;
-    padding-right: 0;
-  }; 
 
   > div { // container
     display: flex;
     justify-content: space-between;
     align-items: center;
-    // background: orange;
-    @include max-width;
 
     .logo {
       height: 40px;
