@@ -14,7 +14,7 @@ const Navlink = ({idx, refs, href, children}) => {
   // --------------------------------------------
 
   const router = useRouter();
-  const { page_ref, active_page, setActivePage } = useContext(PageContext);
+  const { page_ref, footer_ref, active_page, setActivePage } = useContext(PageContext);
 
   // --------------------------------------------
 
