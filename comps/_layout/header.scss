@@ -51,7 +51,10 @@ header {
         margin-bottom: calc(-1 * calc(#{$offset} + #{$padding-bottom}));
         padding-bottom: $padding-bottom;
 
-        transition: all 0.2s ease;
+        transition: 
+          color 0.125s ease,
+          border-bottom 0.8s ease;
+          // all 0.2s ease;
 
         &.active {
           border-bottom: $offset solid white;

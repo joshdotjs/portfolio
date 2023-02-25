@@ -1,6 +1,5 @@
 import { useState, useContext, Fragment  } from 'react';
 import { useRouter } from 'next/router';
-import Link from 'next/link';
 import { gsap } from 'gsap';
 
 import PageContext from 'context/page-context';
@@ -23,13 +22,14 @@ const Navlink = ({idx, active, onClick=()=>{}, href, children}) => {
 
   const handler = () => {
 
+    onClick();
+
     const page = page_ref.current;
 
     gsap.to(page, {
-      x: '500px',
+      x: '100px',
       opacity: 0,
       onComplete: () => {
-        onClick();
         router.push(href);
       },
     })
@@ -38,11 +38,6 @@ const Navlink = ({idx, active, onClick=()=>{}, href, children}) => {
   // --------------------------------------------
 
   return (
-    // <Link
-    //   className={`navlink ${idx === active ? 'active' : ''}`}
-    //   href={href}
-    //   onClick={handler}
-    // >
     <a 
       className={`navlink ${idx === active ? 'active' : ''}`}
       // href={href}
@@ -50,7 +45,6 @@ const Navlink = ({idx, active, onClick=()=>{}, href, children}) => {
     >
       { children }
     </a>
-    // </Link>
   );
 };
 

@@ -16,7 +16,6 @@ const PageContextProvider = ({ children }) => {
 
   // --------------------------------------------
 
-
   const context = {
     page_ref,
   };

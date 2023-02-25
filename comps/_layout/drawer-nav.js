@@ -1,26 +1,55 @@
-import { useState, useEffect, useRef, Fragment } from 'react';
+import { useState, useEffect, useRef, useContext, Fragment } from 'react';
 import { createPortal } from 'react-dom';
-import Link from 'next/link';
+import { useRouter } from 'next/router';
 import { gsap } from 'gsap';
+
+import PageContext from 'context/page-context';
 
 import routes from 'data/routes';
 
-
 // ==============================================
 
-const Navlink = ({idx, active, onClick, refs, href, children}) => {
+const Navlink = ({idx, active, onClick=()=>{}, refs, href, children}) => {
+
+  // --------------------------------------------
+
+  const router = useRouter();
+  const { page_ref } = useContext(PageContext);
+
+  // --------------------------------------------
+
+  const handler = () => {
+
+    onClick();
+    closeDrawer();
+
+    const page = page_ref.current;
+
+    setTimeout(() => {
+      gsap.to(page, {
+        x: '100px',
+        opacity: 0,
+        onComplete: () => {
+          router.push(href);
+        },
+      });
+    }, 500);
+  };
+
+  // --------------------------------------------
+
+
   return (
     <li 
       className="navlink"
     >
-      <Link 
-        href={href}
+      <a 
         ref={el => refs.current[idx] = el}
         className={`navlink__interior ${idx === active ? 'active' : ''}`}
-        onClick={onClick}
+        onClick={handler}
       >
         { children }
-      </Link>
+      </a>
     </li>
   );
 };
