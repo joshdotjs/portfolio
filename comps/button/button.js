@@ -16,7 +16,7 @@ export default function Button({ variant, href, onClick=()=>{}, children }) {
   // --------------------------------------------
 
   const router = useRouter();
-  const { page_ref, setActivePage } = useContext(PageContext);
+  const { page_ref, footer_ref, setActivePage } = useContext(PageContext);
 
   // --------------------------------------------
 
@@ -26,7 +26,6 @@ export default function Button({ variant, href, onClick=()=>{}, children }) {
 
     const transitionPageOut = () => {
       const page = page_ref.current;
-  
       gsap.to(page, {
         x: '100px',
         opacity: 0,
@@ -38,8 +37,18 @@ export default function Button({ variant, href, onClick=()=>{}, children }) {
 
     // - - - - - - - - - - - - - - - - - - - - - 
 
+    const fadeFooterOut = () => {
+      const footer = footer_ref.current;
+      gsap.to(footer, {
+        opacity: 0,
+      });
+    };
+
+    // - - - - - - - - - - - - - - - - - - - - - 
+
     const page_index = getPageindex(href);
     console.log('page_index: ', page_index);
+    fadeFooterOut();
     setActivePage(page_index);
     transitionPageOut();
 

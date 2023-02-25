@@ -39,7 +39,17 @@ const Navlink = ({idx, refs, href, children}) => {
 
     // - - - - - - - - - - - - - - - - - - - - - 
 
+    const fadeFooterOut = () => {
+      const footer = footer_ref.current;
+      gsap.to(footer, {
+        opacity: 0,
+      });
+    };
+
+    // - - - - - - - - - - - - - - - - - - - - - 
+
     closeDrawer();
+    fadeFooterOut();
     setActivePage(idx);
     transitionPageOut();
 
