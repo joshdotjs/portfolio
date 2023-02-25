@@ -7,16 +7,19 @@ export default function eCommerceDemoVideoPage() {
   // --------------------------------------------
 
   return (
-    <Layout id="videos--ecommerce">
+    <Layout id="demos--ecommerce">
+
       <section>
         <iframe 
           width="560" height="315" 
           src="https://www.youtube.com/embed/pBkmgFk0uno" 
           title="YouTube video player" 
-          frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+          frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
           allowfullscreen
           ></iframe>
       </section>
+
+      <iframe src="https://php-web-app.com" ></iframe>
     </Layout>
   );
 

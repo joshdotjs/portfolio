@@ -1,5 +1,6 @@
 @use 'css/partials/vars' as *;
 @use 'css/partials/mixins' as *;
+@use 'css/partials/breakpoints' as *;
 
 section#projects {
   * { margin: 0; }
@@ -11,7 +12,7 @@ section#projects {
 
   .panel { 
     border: solid yellow 3px;
-    overflow: hidden;
+    // overflow: hidden;
 
     display: grid;
     // place-items: center;
@@ -24,17 +25,32 @@ section#projects {
     // - - - - - - - - - - - - - - - - - - - - - -
     
     &:nth-child(1) {
-      .left  {  order: 1; }
+
+      // @include max-width;
+      max-width: $xl;
+      margin: 0 auto;
+      //()()()()()()()()()()
+
+
+
+
+
+      .left  {  order: 1; 
+        background: green;
+
+      }
+
       .right {  order: 2;  position: relative;
+        padding-left: $pad;
+
+
         img {
           justify-self: flex-end;
           border-radius: $rad;
           @include xl {
             height: 700px;
           }
-   
-
-        }
+           }
       }
   
     }
@@ -65,6 +81,13 @@ section#projects {
       }
       .title {}
       .description {}
+      .btn-container {
+        .btn {
+          &:not(:last-child) {
+            margin-right: 1rem;
+          }
+        }
+      }
     }
     
     // - - - - - - - - - - - - - - - - - - - - - -

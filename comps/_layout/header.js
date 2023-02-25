@@ -11,7 +11,7 @@ import routes from 'data/routes';
 
 // ==============================================
 
-const Navlink = ({idx, href, children}) => {
+const Navlink = ({idx, href, no_style, disabled, children}) => {
 
   // --------------------------------------------
 
@@ -63,7 +63,11 @@ const Navlink = ({idx, href, children}) => {
 
   return (
     <a 
-      className={`navlink ${idx === active_page ? 'active' : ''}`}
+      className={no_style 
+        ? '' // if no_style, then don't use the navlink / active classes
+        : `navlink ${idx === active_page ? 'active' : ''}`
+      }
+      style={{ pointerEvents: disabled ? 'none' : 'auto' }}
       // href={href}
       onClick={handler}
     >
@@ -76,6 +80,10 @@ const Navlink = ({idx, href, children}) => {
 
 export default function Header() {
 
+
+  // --------------------------------------------
+
+  const { pathname } = useRouter();
 
   // --------------------------------------------
 
@@ -95,7 +103,9 @@ export default function Header() {
       <header>
         <div>
           
-          <img className="logo" src="/favicon.svg" />
+          <Navlink no_style={true} href="/" disabled={pathname === '/'}>
+            <img className="logo" src="/favicon.svg" />
+          </Navlink>
           
           <ul className="navlinks">
             {routes.map((route, idx) => {
