@@ -3,22 +3,50 @@
 
 section#projects {  position: relative;
   * { margin: 0; }
-  padding: $section-margin  $pad;
+  // padding: $section-margin  $pad;
   color: white;
+  border: dashed tomato 3px;
 
   .panel {
-    border: solid yellow 10px;
+    border: solid yellow 3px;
 
     display: grid;
-    place-items: center;
+    // place-items: center;
 
     grid-template-columns: 1fr;
     @include xl {
       grid-template-columns: 1fr 1fr;
     }
 
+    &:nth-child(1) {
+      div.left  { order: 1; }
+      img.right { order: 2; }
+
+      img {
+        justify-self: flex-end;
+        margin-right: -20%;
+      }
+    }
+
+    &:nth-child(2) {
+      div.left  { order: 2; }
+      img.right { order: 1; }
+      img {
+        justify-self: flex-start;
+        margin-left: -20%;
+      }
+    }
+
+    &:not(:last-child) {
+      margin-bottom: $section-margin;
+    }
+
+    img {
+      height: 400px;
+      border-radius: $rad;
+    }
+
     
-    img {}
   }
 
   // ============================================
