@@ -8,11 +8,11 @@ body {
   }
 
   main {
-    margin-top: 100px; // offset fixed navbar
     opacity: 0; // page transition
   }
 
   footer {
+    opacity: 0; // page transition
     background: lightblue;
     z-index: 10; // .wite: 5, header/footer: 10
   }
