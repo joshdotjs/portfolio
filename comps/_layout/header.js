@@ -1,6 +1,9 @@
-import { useState, Fragment  } from 'react';
+import { useState, useContext, Fragment  } from 'react';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
+import { gsap } from 'gsap';
+
+import PageContext from 'context/page-context';
 
 import Head from 'next/head';
 import NavDrawer, { openDrawer } from './drawer-nav';
@@ -9,15 +12,45 @@ import routes from 'data/routes';
 
 // ==============================================
 
-const Navlink = ({idx, active, onClick, href, children}) => {
+const Navlink = ({idx, active, onClick=()=>{}, href, children}) => {
+
+  // --------------------------------------------
+
+  const router = useRouter();
+  const { page_ref } = useContext(PageContext);
+
+  // --------------------------------------------
+
+  const handler = () => {
+
+    const page = page_ref.current;
+
+    gsap.to(page, {
+      x: '500px',
+      opacity: 0,
+      onComplete: () => {
+        onClick();
+        router.push(href);
+      },
+    })
+  };
+
+  // --------------------------------------------
+
   return (
-    <Link 
+    // <Link
+    //   className={`navlink ${idx === active ? 'active' : ''}`}
+    //   href={href}
+    //   onClick={handler}
+    // >
+    <a 
       className={`navlink ${idx === active ? 'active' : ''}`}
-      href={href}
-      onClick={onClick}
+      // href={href}
+      onClick={handler}
     >
       { children }
-    </Link>   
+    </a>
+    // </Link>
   );
 };
 

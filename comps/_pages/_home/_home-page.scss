@@ -4,28 +4,5 @@
 // ==============================================
 
 main#home.page {
-
-  #hero {
-    padding: $pad;
-    background: red;
-
-    // background-image: url('/img/AdobeStock_504342231_1920x1280.webp');
-
-
-
-    .left {
-
-    }
-
-    .right {
-      
-    }
-
-    #construction {
-      width: 100vw;
-      position: absolute;
-      bottom: 10%;
-      text-align: center;
-    }
-  }
+  @import './1_hero.scss';
 }
