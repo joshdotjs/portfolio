@@ -1,33 +1,46 @@
 @use 'css/partials/vars' as *;
 @use 'css/partials/mixins' as *;
 
-section#projects {  position: relative;
+section#projects {
   * { margin: 0; }
   // padding: $section-margin  $pad;
   color: white;
   border: dashed tomato 3px;
 
-  .panel {
+  // ============================================
+
+  .panel { 
     border: solid yellow 3px;
+    overflow: hidden;
 
     display: grid;
     // place-items: center;
 
     grid-template-columns: 1fr;
     @include xl {
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 50% 50%; // needed for how I'm doing image off screen
     }
 
+    // - - - - - - - - - - - - - - - - - - - - - -
+    
     &:nth-child(1) {
-      div.left  { order: 1; }
-      img.right { order: 2; }
+      .left  {  order: 1; }
+      .right {  order: 2;  position: relative;
+        img {
+          justify-self: flex-end;
+          border-radius: $rad;
+          @include xl {
+            height: 700px;
+          }
+   
 
-      img {
-        justify-self: flex-end;
-        margin-right: -20%;
+        }
       }
+  
     }
 
+    // - - - - - - - - - - - - - - - - - - - - - -
+    
     &:nth-child(2) {
       div.left  { order: 2; }
       img.right { order: 1; }
@@ -36,17 +49,26 @@ section#projects {  position: relative;
         margin-left: -20%;
       }
     }
-
+    
+    // - - - - - - - - - - - - - - - - - - - - - -
+    
     &:not(:last-child) {
       margin-bottom: $section-margin;
     }
-
-    img {
-      height: 400px;
-      border-radius: $rad;
-    }
-
     
+    // - - - - - - - - - - - - - - - - - - - - - -
+
+    .left {
+      .icon {
+        width: 50px;
+        height: 50px;
+      }
+      .title {}
+      .description {}
+    }
+    
+    // - - - - - - - - - - - - - - - - - - - - - -
+
   }
 
   // ============================================
