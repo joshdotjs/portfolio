@@ -1,0 +1,25 @@
+@use 'css/partials/vars' as *;
+@use 'css/partials/mixins' as *;
+
+section#projects {  position: relative;
+  * { margin: 0; }
+  padding: $section-margin  $pad;
+  color: white;
+
+  .panel {
+    border: solid yellow 10px;
+
+    display: grid;
+    place-items: center;
+
+    grid-template-columns: 1fr;
+    @include xl {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    
+    img {}
+  }
+
+  // ============================================
+}
