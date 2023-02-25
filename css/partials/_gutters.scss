@@ -15,7 +15,7 @@ header {
   }; 
 
   > div { // container
-    background: orange;
+    // background: orange;
     @include max-width;
   }
 }

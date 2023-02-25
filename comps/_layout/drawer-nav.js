@@ -33,7 +33,7 @@ const Navlink = ({idx, active, onClick=()=>{}, refs, href, children}) => {
           router.push(href);
         },
       });
-    }, 500);
+    }, 350);
   };
 
   // --------------------------------------------

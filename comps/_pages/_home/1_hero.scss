@@ -1,11 +1,29 @@
-section#hero {
+@use 'css/partials/vars' as *;
+
+// ==============================================
+
+section#hero {  position: relative;
   * { margin: 0; }
   padding: $pad;
   color: white;
+  border-radius: $rad;
+  overflow: hidden;
   background-image: url('/img/AdobeStock_504342231_1920x1280.webp');
   display: grid;
   grid-template-columns: 1fr 1fr;
 
+  .overlay {  position: absolute;  z-index: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+  }
+
+  .left,
+  .right {  position: relative;  z-index: 1;
+
+  }
 
   .left {
     svg {
