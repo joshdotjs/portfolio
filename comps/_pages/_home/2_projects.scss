@@ -17,54 +17,77 @@ section#projects {
     display: grid;
     // place-items: center;
 
-    grid-template-columns: 1fr;
+    // grid-template-columns: 1fr;
     @include xl {
       grid-template-columns: 50% 50%; // needed for how I'm doing image off screen
     }
 
     // - - - - - - - - - - - - - - - - - - - - - -
+
     
-    &:nth-child(1) {
-
-      // @include max-width;
-      max-width: $xl;
-      margin: 0 auto;
-      //()()()()()()()()()()
-
-
-
-
-
-      .left  {  order: 1; 
-        background: green;
-
-      }
-
-      .right {  order: 2;  position: relative;
-        padding-left: $pad;
-
-
-        img {
-          justify-self: flex-end;
-          border-radius: $rad;
-          @include xl {
-            height: 700px;
-          }
-           }
-      }
-  
-    }
 
     // - - - - - - - - - - - - - - - - - - - - - -
     
-    &:nth-child(2) {
-      div.left  { order: 2; }
-      img.right { order: 1; }
-      img {
-        justify-self: flex-start;
-        margin-left: -20%;
+    // @include max-width;
+    max-width: $xl;
+    margin: 0 auto;
+    //()()()()()()()()()()
+
+    // - - - - - - - - - - - - - - - - - - - - - -
+
+    .left  {
+      background: green;
+      
+      justify-self: center;
+
+
+      max-width: 500px;
+      padding: $pad;
+      @include xl {
+        padding: 0;
+        max-width: auto;
       }
     }
+
+    // - - - - - - - - - - - - - - - - - - - - - -
+
+    .right {  position: relative;
+      padding: $pad;
+      @include xl { padding: 0; }
+
+      img {
+        border-radius: $rad;
+
+        width: 100%;
+
+        @include xl {
+          height: 700px;
+          width: auto;
+        }
+      }
+    }
+
+
+    // - - - - - - - - - - - - - - - - - - - - - -
+    @include xl {
+      &:nth-child(odd) {
+        .left  {  order: 1; }
+        .right {  order: 2; img { justify-self: flex-end; } }
+      }
+  
+      // - - - - - - - - - - - - - - - - - - - - - -
+      
+      &:nth-child(even) {
+        .left  {  order: 2; }
+        .right {  order: 1; 
+          img { 
+            justify-self: flex-start; 
+            transform: translateX(-60%); 
+          }
+        }
+      }
+    }
+    
     
     // - - - - - - - - - - - - - - - - - - - - - -
     
