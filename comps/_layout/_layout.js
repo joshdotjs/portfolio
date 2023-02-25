@@ -3,7 +3,7 @@ import Footer from './footer';
 
 // ==============================================
 
-export default function Layout({ children }) {
+export default function Layout({ id, children }) {
 
   // --------------------------------------------
 
@@ -11,7 +11,7 @@ export default function Layout({ children }) {
     <>
       <Header />
       
-      <main>{children}</main>
+      <main id={id} className="page">{children}</main>
 
       <Footer />
     </>
