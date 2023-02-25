@@ -1,4 +1,5 @@
 @use 'css/partials/vars' as *;
+@use 'css/partials/mixins' as *;
 
 // ==============================================
 
@@ -6,8 +7,11 @@ section#hero {  position: relative;
   * { margin: 0; }
   padding: $pad;
   color: white;
-  border-radius: $rad;
-  overflow: hidden;
+
+  @include xl {
+    border-radius: $rad;
+    overflow: hidden;
+  }
   background-image: url('/img/AdobeStock_504342231_1920x1280.webp');
   display: grid;
   grid-template-columns: 1fr 1fr;
