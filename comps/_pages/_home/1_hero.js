@@ -8,9 +8,11 @@ export default function Hero() {
       
       <div className="left">
 
-        <div className="left-container">
 
-          <svg xmlns="http://www.w3.org/2000/svg" className="hero-design shadow" width="686" height="688" viewBox="0 0 686 688">
+          <svg xmlns="http://www.w3.org/2000/svg" className="hero-design shadow" 
+            // width="686" height="688" 
+            viewBox="0 0 686 688"
+          >
             <g id="blockdesign" transform="translate(-935 -289)">
               <rect id="top-square"className="square-anim" data-name="Rectangle 2" width="172" height="172" rx="19" transform="translate(1277 289)" fill="rgba(255, 255, 255, 0.5)"/>
               <rect id="top-circle" className="square-anim" data-name="Rectangle 10" width="172" height="172" rx="86" transform="translate(1277 461)" fill="deepskyblue"/>
@@ -22,10 +24,8 @@ export default function Hero() {
               <rect id="row-4-square" className="square-anim" data-name="Rectangle 4" width="172" height="172" rx="19" transform="translate(1107 805)" fill="rgba(255, 255, 255, 0.8)" />
             </g>
           </svg>
-        </div>
 
       </div>
-
         
       <div className="right">
         <div className="super-title stagger1">

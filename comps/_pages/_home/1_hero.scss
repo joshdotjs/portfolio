@@ -1,11 +1,9 @@
 @use 'css/partials/vars' as *;
 @use 'css/partials/mixins' as *;
 
-// ==============================================
-
 section#hero {  position: relative;
   * { margin: 0; }
-  padding: $pad;
+  padding: $section-margin  $pad;
   color: white;
 
   @include xl {
@@ -16,6 +14,8 @@ section#hero {  position: relative;
   display: grid;
   grid-template-columns: 1fr 1fr;
 
+  // ============================================
+
   .overlay {  position: absolute;  z-index: 0;
     top: 0;
     left: 0;
@@ -24,21 +24,29 @@ section#hero {  position: relative;
     background: rgba(0,0,0,0.7);
   }
 
+  // ============================================
+
   .left,
   .right {  position: relative;  z-index: 1;
-
   }
+
+  // ============================================
 
   .left {
+    display: flex;
+    justify-content: center;
     svg {
-      width: 100%;
-      height: 100%;
+      width: 70%;
+      // height: 100%;
     }
   }
+
+  // ============================================
 
   .right {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     
     .suer-title,
     .title,
@@ -66,10 +74,13 @@ section#hero {  position: relative;
     }
   }
 
-  #construction {
-    width: 100vw;
-    position: absolute;
-    bottom: 10%;
-    text-align: center;
+  // ============================================
+
+  #construction { position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
   }
+
+  // ============================================
 }
