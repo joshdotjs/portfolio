@@ -9,31 +9,41 @@ import routes from 'data/routes';
 
 // ==============================================
 
-const Navlink = ({idx, active, onClick=()=>{}, refs, href, children}) => {
+const Navlink = ({idx, refs, href, children}) => {
 
   // --------------------------------------------
 
   const router = useRouter();
-  const { page_ref } = useContext(PageContext);
+  const { page_ref, active_page, setActivePage } = useContext(PageContext);
 
   // --------------------------------------------
 
   const handler = () => {
 
-    onClick();
+    // - - - - - - - - - - - - - - - - - - - - - 
+    
+    const transitionPageOut = () => {
+
+      const page = page_ref.current;
+      
+      setTimeout(() => {
+        gsap.to(page, {
+          x: '100px',
+          opacity: 0,
+          onComplete: () => {
+            router.push(href);
+          },
+        });
+      }, 300);
+    };
+
+    // - - - - - - - - - - - - - - - - - - - - - 
+
     closeDrawer();
+    setActivePage(idx);
+    transitionPageOut();
 
-    const page = page_ref.current;
-
-    setTimeout(() => {
-      gsap.to(page, {
-        x: '100px',
-        opacity: 0,
-        onComplete: () => {
-          router.push(href);
-        },
-      });
-    }, 350);
+    // - - - - - - - - - - - - - - - - - - - - - 
   };
 
   // --------------------------------------------
@@ -45,7 +55,7 @@ const Navlink = ({idx, active, onClick=()=>{}, refs, href, children}) => {
     >
       <a 
         ref={el => refs.current[idx] = el}
-        className={`navlink__interior ${idx === active ? 'active' : ''}`}
+        className={`navlink__interior ${idx === active_page ? 'active' : ''}`}
         onClick={handler}
       >
         { children }
@@ -57,7 +67,7 @@ const Navlink = ({idx, active, onClick=()=>{}, refs, href, children}) => {
 // ==============================================
 
 let openDrawer, closeDrawer;
-const NavDrawer = ({ active_page, setActivePage }) => {
+const NavDrawer = () => {
 
   // --------------------------------------------
 
@@ -173,7 +183,7 @@ const NavDrawer = ({ active_page, setActivePage }) => {
               const key = `header-navlink-${idx}`;
               return (
                 <Fragment key={key}>
-                  <Navlink {...{ href, idx }} active={active_page} onClick={() => setActivePage(idx)} refs={navlink_refs}>{ name }</Navlink>
+                  <Navlink {...{ href, idx }} refs={navlink_refs}>{ name }</Navlink>
                 </Fragment>
               );
             })}

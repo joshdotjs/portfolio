@@ -1,0 +1,33 @@
+.btn {
+  all: unset;
+  cursor: pointer;
+
+  display: inline-block;
+  border: solid 1px white;
+  padding: 0.5rem 1rem;
+
+  font-size: 0.8rem;
+
+  transition: 
+    background-color 0.2s ease, 
+    color 0.2s ease;
+
+  &-full {
+    color: black;
+    background: white;
+  
+    &:hover {
+      color: white;
+      background: transparent;
+    }
+  }
+  
+  &-empty {
+    border-color: white;
+    
+    &:hover {
+      background: white;
+      color: black;
+    }
+  }
+}

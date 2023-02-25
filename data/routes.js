@@ -17,4 +17,13 @@ const routes = [
 
 // ==============================================
 
+const getPageindex = (pathname) => {
+  const hrefs = routes.map(({href}) => href);
+  const index = hrefs.indexOf(pathname);
+  return index;
+};
+
+// ==============================================
+
 export default routes;
+export { getPageindex };

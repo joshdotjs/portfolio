@@ -90,6 +90,14 @@ section#hero {  position: relative;
     .sub-title {
       font-size: 1rem;
       font-weight: 300;
+      margin-bottom: 1.2rem;
+    }
+
+    .btn-container {
+      background: hellow;
+
+      .btn:nth-child(1) {}
+      .btn:nth-child(2) { margin-left: 1.2rem; }
     }
   }
 

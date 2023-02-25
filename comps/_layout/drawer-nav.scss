@@ -69,6 +69,7 @@
           &.active {
             border-bottom: $offset solid white;
             color: white;
+            pointer-events: none;
           }
         }
         

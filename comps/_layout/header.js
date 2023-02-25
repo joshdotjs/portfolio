@@ -1,4 +1,4 @@
-import { useState, useContext, Fragment  } from 'react';
+import { useState, useEffect, useContext, Fragment  } from 'react';
 import { useRouter } from 'next/router';
 import { gsap } from 'gsap';
 
@@ -11,35 +11,48 @@ import routes from 'data/routes';
 
 // ==============================================
 
-const Navlink = ({idx, active, onClick=()=>{}, href, children}) => {
+const Navlink = ({idx, href, children}) => {
 
   // --------------------------------------------
 
   const router = useRouter();
-  const { page_ref } = useContext(PageContext);
+  const { page_ref, active_page, setActivePage } = useContext(PageContext);
+
+  useEffect(() => {
+    console.log('header - active_page: ', active_page);
+  }, [active_page]);
 
   // --------------------------------------------
 
   const handler = () => {
 
-    onClick();
+    // - - - - - - - - - - - - - - - - - - - - - 
 
-    const page = page_ref.current;
+    const transitionPageOut = () => {
+      const page = page_ref.current;
+      
+      gsap.to(page, {
+        x: '100px',
+        opacity: 0,
+        onComplete: () => {
+          router.push(href);
+        },
+      });
+    };
 
-    gsap.to(page, {
-      x: '100px',
-      opacity: 0,
-      onComplete: () => {
-        router.push(href);
-      },
-    })
+    // - - - - - - - - - - - - - - - - - - - - - 
+
+    setActivePage(idx);
+    transitionPageOut();
+
+    // - - - - - - - - - - - - - - - - - - - - - 
   };
 
   // --------------------------------------------
 
   return (
     <a 
-      className={`navlink ${idx === active ? 'active' : ''}`}
+      className={`navlink ${idx === active_page ? 'active' : ''}`}
       // href={href}
       onClick={handler}
     >
@@ -52,11 +65,6 @@ const Navlink = ({idx, active, onClick=()=>{}, href, children}) => {
 
 export default function Header() {
 
-  // --------------------------------------------
-
-  const router = useRouter();
-
-  const [active_page, setActivePage] = useState(['/', '/portfolio', '/contact'].indexOf(router.pathname));
 
   // --------------------------------------------
 
@@ -84,7 +92,9 @@ export default function Header() {
               const key = `header-navlink-${idx}`;
               return (
                 <Fragment key={key}>
-                  <Navlink {...{ href, idx }} active={active_page} onClick={() => setActivePage(idx)}>{ name }</Navlink>
+                  <Navlink {...{ href, idx }}>
+                    { name }
+                  </Navlink>
                 </Fragment>
               );
             })}
@@ -113,7 +123,9 @@ export default function Header() {
         </div>
       </header>
 
-      <NavDrawer {...{active_page, setActivePage}} />
+      <NavDrawer 
+        // {...{active_page, setActivePage}} 
+      />
     </>
   );
 

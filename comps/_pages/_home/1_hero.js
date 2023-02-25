@@ -1,3 +1,7 @@
+import Button from "comps/button/button";
+
+// ==============================================
+
 export default function Hero() {
   return (
     <section id="hero" className="hero-gutters">
@@ -38,7 +42,14 @@ export default function Hero() {
         <div className="sub-title stagger1">
           JavaScript | React | Node | Laravel
         </div>
+
+        <div className="btn-container">
+          <Button variant="full"  href="/portfolio">Demos</Button>
+          <Button variant="empty" href="/contact">Contact</Button>
+        </div>
       </div>
     </section>
   );
 }
+
+// ==============================================
