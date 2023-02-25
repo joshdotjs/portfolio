@@ -1,16 +1,31 @@
+@use 'css/partials/vars' as *;
+
 /* ========================================= */
 /* ----------- "Sticky"-Footer ------------- */
 /* ╲╱ ╲╱ ╲╱ ╲╱ ╲╱ ╲╱ ╲╱ ╲╱ ╲╱ ╲╱ ╲╱ ╲╱ ╲╱ ╲╱ */
-html {            height: 100%;   background: yellow;
-  body {          height: 100%;   background: orange;
-    #__next { min-height: 100%;   background:  darkorchid;
-      display: flex;
-      flex-direction: column;
-      main { flex-grow: 1; }            // method 2
-      footer{ justify-self: flex-end; } // method 2 (method-1: margin-top: auto, method-3: grid)
-    }
-  }
-}
+// html {            height: 100%;   background: yellow;
+//   body {          height: 100%;   background: orange;
+//     #__next { min-height: 100%;   background:  darkorchid;
+//       display: flex;
+//       flex-direction: column;
+//       main { flex-grow: 1; }            // method 2
+//       footer{ justify-self: flex-end; } // method 2 (method-1: margin-top: auto, method-3: grid)
+//     }
+//   }
+// }
 /* ╱╲ ╱╲ ╱╲ ╱╲ ╱╲ ╱╲ ╱╲ ╱╲ ╱╲ ╱╲ ╱╲ ╱╲ ╱╲ ╱╲ */
 /* ^^^^^^^^^^^ "Sticky"-Footer ^^^^^^^^^^^^^ */
 /* ========================================= */
+
+html {            height: 100%;   background: yellow;
+  body {          height: 100%;   background: orange;
+    #__next { min-height: 100%;   background:  darkorchid;
+      display: grid;
+      grid-template-rows: $navbar-height 1fr $navbar-height;
+
+      header { grid-row: 1 / 2; }
+      main   { grid-row: 2 / 3; }
+      footer { grid-row: 3 / 4; }
+    }
+  }
+}

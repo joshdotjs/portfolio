@@ -5,6 +5,7 @@
 
 header { 
   width: 100vw;
+  height: $navbar-height;
 
   > div { // container
     display: flex;
