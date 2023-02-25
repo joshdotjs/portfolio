@@ -8,9 +8,10 @@ import { getPageindex } from "data/routes";
 
 // ==============================================
 
-export default function Button({ variant, href, children }) {
+export default function Button({ variant, href, onClick=()=>{}, children }) {
 
   // href => if href is provided, render an anchor tag
+  // onClic => if href not supplied, then run onClick when <button/> is clicked
 
   // --------------------------------------------
 
@@ -19,12 +20,7 @@ export default function Button({ variant, href, children }) {
 
   // --------------------------------------------
 
-  const handler = () => {
-
-    // - - - - - - - - - - - - - - - - - - - - - 
-
-    // const fadeOutNavlinks = () => {
-    // };
+  const linkHandler = () => {
 
     // - - - - - - - - - - - - - - - - - - - - - 
 
@@ -62,7 +58,7 @@ export default function Button({ variant, href, children }) {
           ${variant === 'full' ? 'btn-full' : 'btn-empty'}
         `}
         role="button"
-        onClick={handler}
+        onClick={linkHandler}
       >
         { children }
       </a>
@@ -74,6 +70,7 @@ export default function Button({ variant, href, children }) {
           ${variant === 'full' ? 'btn-full' : 'btn-empty'}
         `}
         role="button"
+        onClick={onClick}
       >
         { children }
       </button>

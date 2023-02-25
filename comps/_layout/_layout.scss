@@ -1,5 +1,6 @@
 body {
-  overflow-x: clip;
+  // overflow-x: clip;
+  overflow-x: hidden;
 
   header { position: fixed;
     background: lightgreen;

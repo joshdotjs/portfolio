@@ -20,21 +20,22 @@ const PageContextProvider = ({ children }) => {
   // --------------------------------------------
 
   const page_ref = useRef(null);
+  const footer_ref = useRef(null);
 
   // --------------------------------------------
 
-  const hrefs = routes.map(({href}) => href);
-  const index = hrefs.indexOf(router.pathname);
-  const [active_page, setActivePage] = useState(index);
+  const page_index = getPageindex(router.pathname);
+  const [active_page, setActivePage] = useState(page_index);
 
-  useEffect(() => {
-    console.log('context - active_page: ', active_page);
-  }, [active_page]);
+  // useEffect(() => {
+  //   console.log('context - active_page: ', active_page);
+  // }, [active_page]);
 
   // --------------------------------------------
 
   const context = {
     page_ref,
+    footer_ref,
     active_page,
     setActivePage,
   };

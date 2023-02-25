@@ -14,19 +14,42 @@ export default function Layout({ id, children }) {
   // --------------------------------------------
 
   const router = useRouter();
-  const { page_ref } = useContext(PageContext);
+  const { page_ref, footer_ref } = useContext(PageContext);
 
   useEffect(() => {
     
-    const page = page_ref.current;
-    gsap.fromTo(page, {
-        x: '-100px',  
+    // - - - - - - - - - - - - - - - - - - - - - 
+
+    const transitionPageIn = () => {
+      const page = page_ref.current;
+      gsap.fromTo(page, {
+          x: '-100px',  
+          opacity: 0,
+        },
+        {
+          x: '0px',
+          opacity: 1,
+      });
+    };
+
+    // - - - - - - - - - - - - - - - - - - - - - 
+
+    const fadeFooterIn = () => {
+      const footer = footer_ref.current;
+            
+      gsap.fromTo(footer, {
         opacity: 0,
-      },
-      {
-        x: '0px',
+      }, {
         opacity: 1,
-    });
+      });
+    };
+
+    // - - - - - - - - - - - - - - - - - - - - - 
+
+    transitionPageIn();
+    fadeFooterIn();
+
+    // - - - - - - - - - - - - - - - - - - - - - 
 
   }, [router.events]);
 

@@ -16,11 +16,11 @@ const Navlink = ({idx, href, children}) => {
   // --------------------------------------------
 
   const router = useRouter();
-  const { page_ref, active_page, setActivePage } = useContext(PageContext);
+  const { page_ref, footer_ref, active_page, setActivePage } = useContext(PageContext);
 
-  useEffect(() => {
-    console.log('header - active_page: ', active_page);
-  }, [active_page]);
+  // useEffect(() => {
+  //   console.log('header - active_page: ', active_page);
+  // }, [active_page]);
 
   // --------------------------------------------
 
@@ -30,7 +30,7 @@ const Navlink = ({idx, href, children}) => {
 
     const transitionPageOut = () => {
       const page = page_ref.current;
-      
+            
       gsap.to(page, {
         x: '100px',
         opacity: 0,
@@ -42,6 +42,17 @@ const Navlink = ({idx, href, children}) => {
 
     // - - - - - - - - - - - - - - - - - - - - - 
 
+    const fadeFooterOut = () => {
+      const footer = footer_ref.current;
+            
+      gsap.to(footer, {
+        opacity: 0,
+      });
+    };
+
+    // - - - - - - - - - - - - - - - - - - - - - 
+
+    fadeFooterOut();
     setActivePage(idx);
     transitionPageOut();
 
