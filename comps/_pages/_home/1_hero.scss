@@ -12,7 +12,15 @@ section#hero {  position: relative;
   }
   background-image: url('/img/AdobeStock_504342231_1920x1280.webp');
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  place-items: center;
+
+  grid-template-columns: 1fr;
+  @include xl {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+
+
 
   // ============================================
 
@@ -39,6 +47,11 @@ section#hero {  position: relative;
       width: 70%;
       // height: 100%;
     }
+
+    display: none;
+    @include xl {
+      display: flex;
+    }
   }
 
   // ============================================
@@ -47,7 +60,8 @@ section#hero {  position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    
+    width: fit-content;
+
     .suer-title,
     .title,
     .sub-title {
@@ -80,6 +94,8 @@ section#hero {  position: relative;
     bottom: 5%;
     left: 50%;
     transform: translateX(-50%);
+    width: 300px;
+    text-align: center;
   }
 
   // ============================================
