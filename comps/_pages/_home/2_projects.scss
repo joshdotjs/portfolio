@@ -87,8 +87,8 @@ section#projects {
     // ------------------------------------------
 
     .right {  position: relative;
-      padding: $gutter;
-      padding-top: 0; 
+      padding: 0 $gutter;
+
       @include xl { padding: 0; }
 
       img {
