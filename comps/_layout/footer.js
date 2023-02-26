@@ -4,6 +4,10 @@ import PageContext from "context/page-context";
 
 // ==============================================
 
+const year = new Date().getFullYear();
+
+// ==============================================
+
 export default function Footer() {
 
   // --------------------------------------------
@@ -13,7 +17,7 @@ export default function Footer() {
   // --------------------------------------------
 
   return (
-    <footer ref={footer_ref}>footer</footer>
+    <footer ref={footer_ref}>Josh Holloway © { year }</footer>
   );
 
   // --------------------------------------------

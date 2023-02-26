@@ -3,9 +3,9 @@
 /* ========================================= */
 /* ----------- "Sticky"-Footer ------------- */
 /* ╲╱ ╲╱ ╲╱ ╲╱ ╲╱ ╲╱ ╲╱ ╲╱ ╲╱ ╲╱ ╲╱ ╲╱ ╲╱ ╲╱ */
-html {            height: 100%;   background: yellow;
-  body {          height: 100%;   background: orange;
-    #__next { min-height: 100%;   background:  darkorchid;
+html {            height: 100%;   //background: yellow;
+  body {          height: 100%;   background: black; //background: orange;
+    #__next { min-height: 100%;   background: black; //background:  darkorchid;
       display: grid;
       grid-template-rows: $navbar-height 1fr $navbar-height;
 

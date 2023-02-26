@@ -3,8 +3,7 @@ body {
   overflow-x: hidden;
 
   header { position: fixed;
-    background: lightgreen;
-    z-index: 10; // .wite: 5, header/footer: 10
+    z-index: 10;
   }
 
   main {
@@ -13,7 +12,6 @@ body {
 
   footer {
     opacity: 0; // page transition
-    background: lightblue;
-    z-index: 10; // .wite: 5, header/footer: 10
+    z-index: 10;
   }
 }
