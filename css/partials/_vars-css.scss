@@ -7,7 +7,7 @@
   --max-w: #{$xxl};
   --gutter: 2rem;
   --rad: 12px;
-  --section-margin: 6rem;
+  
   --navbar-height: 80px;
 
   --grey: lightgrey;
@@ -34,6 +34,8 @@
     --fs-300: 0.7rem;
     --fs-200: 0.5rem;
     --fs-100: 0.3rem;
+
+    --section-margin: 4rem;
   }
 
   @media (min-width: #{$lg}) {
@@ -46,5 +48,7 @@
     --fs-300: 0.8rem;
     --fs-200: 0.6rem;
     --fs-100: 0.4rem;
+
+    --section-margin: 6rem;
   }
 }
