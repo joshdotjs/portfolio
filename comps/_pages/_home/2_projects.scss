@@ -5,17 +5,18 @@
 section#projects {
   * { margin: 0; }
   // padding: $section-margin  $pad;
-  color: white;
-  border: dashed tomato 3px;
+  color: black;
+  // border: dashed tomato 3px;
 
   // ============================================
 
   .panel { 
-    border: solid yellow 3px;
+    border: solid hsla(0, 0%, 50%, 0.1) 1px;
     // overflow: hidden;
 
+    @include max-width;
+
     display: grid;
-    // place-items: center;
 
     // grid-template-columns: 1fr;
     @include xl {
@@ -24,19 +25,8 @@ section#projects {
 
     // - - - - - - - - - - - - - - - - - - - - - -
 
-    
-
-    // - - - - - - - - - - - - - - - - - - - - - -
-    
-    // @include max-width;
-    max-width: $xl;
-    margin: 0 auto;
-    //()()()()()()()()()()
-
-    // - - - - - - - - - - - - - - - - - - - - - -
-
     .left  {
-      background: green;
+      // background: green;
       
       justify-self: center;
 
