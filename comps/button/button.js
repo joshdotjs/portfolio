@@ -8,10 +8,13 @@ import { getPageindex } from "data/routes";
 
 // ==============================================
 
-export default function Button({ variant, href, onClick=()=>{}, children }) {
+export default function Button({ variant, color, href, onClick=()=>{}, children }) {
 
   // href => if href is provided, render an anchor tag
   // onClic => if href not supplied, then run onClick when <button/> is clicked
+
+  // variant: 'full' | 'empty'
+  // color: 'dark' | 'light'
 
   // --------------------------------------------
 
@@ -65,6 +68,7 @@ export default function Button({ variant, href, onClick=()=>{}, children }) {
       <a 
         className={`btn
           ${variant === 'full' ? 'btn-full' : 'btn-empty'}
+          ${color === 'dark' ? 'btn-dark' : 'btn-light'}
         `}
         role="button"
         onClick={linkHandler}
@@ -77,6 +81,7 @@ export default function Button({ variant, href, onClick=()=>{}, children }) {
       <button 
         className={`btn
           ${variant === 'full' ? 'btn-full' : 'btn-empty'}
+          ${color === 'dark' ? 'btn-dark' : 'btn-light'}
         `}
         role="button"
         onClick={onClick}

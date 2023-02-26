@@ -15,9 +15,9 @@ const Panel = ({ id, className, title, description, icon, img }) => {
         <p className="description">{ description }</p>
 
         <div className="btn-container">
-          <Button variant="full"  href="/demos/ecommerce">Summary</Button>
-          <Button variant="empty" href="https://www.php-web-app.com">Live Demo</Button>
-          <Button variant="empty" href="/videos/ecommerce">Video</Button>
+          <Button variant="full"  color="dark" href="/demos/ecommerce">Summary</Button>
+          <Button variant="empty" color="dark" href="https://www.php-web-app.com">Live Demo</Button>
+          <Button variant="empty" color="dark" href="/videos/ecommerce">Video</Button>
         </div>
 
       </div>

@@ -6,9 +6,12 @@ section#hero {  position: relative;
   padding: $section-margin  $pad;
   color: white;
 
+  min-height: 100vh;
+
   @include xl {
     border-radius: $rad;
     overflow: hidden;
+    min-height: 60vh;
   }
 
   background-image: url('/img/AdobeStock_504342231_1920x1280.webp');

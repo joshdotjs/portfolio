@@ -12,7 +12,15 @@
     background-color 0.2s ease, 
     color 0.2s ease;
 
-  &-full {
+  //                  color    bg            :hover color    :hover bg
+  // full / dark:     
+  // empty / dark:
+  // full / light:    black    white         white           transparent
+  // empty / light:   white    transparent   white           black
+
+  // - - - - - - - - - - - - - - - - - - - - - - 
+
+  &-full.btn-light {
     color: black;
     background: white;
   
@@ -22,7 +30,7 @@
     }
   }
   
-  &-empty {
+  &-empty.btn-light {
     border-color: white;
     
     &:hover {
@@ -30,4 +38,28 @@
       color: black;
     }
   }
+
+  // - - - - - - - - - - - - - - - - - - - - - - 
+
+  &-full.btn-dark {
+    color: white;
+    background: black;
+    border-color: black;
+  
+    &:hover {
+      color: black;
+      background: transparent;
+    }
+  }
+  
+  &-empty.btn-dark {
+    border-color: black;
+    
+    &:hover {
+      background: black;
+      color: white;
+    }
+  }
+
+  // - - - - - - - - - - - - - - - - - - - - - - 
 }

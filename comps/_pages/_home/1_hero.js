@@ -44,8 +44,8 @@ export default function Hero() {
         </div>
 
         <div className="btn-container">
-          <Button variant="full"  href="/portfolio">Demos</Button>
-          <Button variant="empty" href="/contact">Contact</Button>
+          <Button variant="full"  color="light" href="/portfolio">Demos</Button>
+          <Button variant="empty" color="light" href="/contact">Contact</Button>
         </div>
       </div>
     </section>
