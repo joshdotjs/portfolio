@@ -11,8 +11,7 @@ section#projects {
   // ============================================
 
   .panel { 
-    border: solid hsla(0, 0%, 50%, 0.1) 1px;
-    // overflow: hidden;
+    // border: solid hsla(0, 0%, 50%, 0.1) 1px;
 
     @include max-width;
 
@@ -28,15 +27,15 @@ section#projects {
     .left  {
       // background: lightgreen;
       
-      justify-self: center;
       align-self: center;
-
+      justify-self: center;
 
       max-width: 500px;
       padding: $pad;
       @include xl {
         padding: 0;
         max-width: auto;
+        justify-self: flex-start;
       }
     }
 
@@ -44,6 +43,7 @@ section#projects {
 
     .right {  position: relative;
       padding: $pad;
+      padding-top: 0; 
       @include xl { padding: 0; }
 
       img {
@@ -75,7 +75,7 @@ section#projects {
         .right {  order: 1; 
           img { 
             justify-self: flex-start; 
-            transform: translateX(-60%); 
+            transform: translateX(-45%); 
           }
         }
       }
@@ -100,9 +100,9 @@ section#projects {
         margin-bottom: 0.6rem;
       }
       .description {
-        margin-bottom: 1rem;
         line-height: 1.6;
         color: $text-grey-dark;
+        margin-bottom: 1rem;
       }
       .btn-container {
         .btn {
@@ -110,6 +110,7 @@ section#projects {
             margin-right: 1rem;
           }
         }
+        margin-bottom: 0.15rem;
       }
     }
     

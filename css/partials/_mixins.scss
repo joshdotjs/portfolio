@@ -27,6 +27,12 @@
   }
 }
 
+@mixin xxl {
+  @media screen and (min-width: #{$xxl}) {
+    @content;
+  }
+}
+
 // ==============================================
 
 @mixin max-width {
