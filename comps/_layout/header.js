@@ -11,7 +11,7 @@ import routes from 'data/routes';
 
 // ==============================================
 
-const Navlink = ({idx, href, no_style, disabled, children}) => {
+const Navlink = ({idx, href, no_style, children}) => {
 
   // --------------------------------------------
 
@@ -61,6 +61,10 @@ const Navlink = ({idx, href, no_style, disabled, children}) => {
 
   // --------------------------------------------
 
+  const disabled = idx === active_page;
+
+  // --------------------------------------------
+
   return (
     <a 
       className={no_style 
@@ -103,7 +107,7 @@ export default function Header() {
       <header>
         <div>
           
-          <Navlink no_style={true} href="/" disabled={pathname === '/'}>
+          <Navlink idx={0} no_style={true} href="/">
             <img className="logo" src="/favicon.svg" />
           </Navlink>
           
