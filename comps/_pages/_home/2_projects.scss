@@ -116,6 +116,7 @@ section#projects {
 
     .right {  position: relative;
       padding: 0 $gutter;
+      display: flex; // fixes slight gap below image
 
       @include xl { padding: 0; }
 
@@ -150,8 +151,16 @@ section#projects {
         
     // ------------------------------------------
     
+
+    &:not(:first-child) {
+      padding-top: calc(#{$section-margin} / 2 );
+    }
+
     &:not(:last-child) {
-      margin-bottom: $section-margin;
+      padding-bottom: calc(#{$section-margin} / 2 );
+
+      border-bottom: solid $bg-secondary 2px;
+      // border-bottom: solid $text-grey-light 2px;
     }
     
     // ------------------------------------------
