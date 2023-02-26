@@ -78,6 +78,11 @@ section#projects {
           .logo {
             height: calc(#{$fs-700} + 6px);//30px;
             &:not(:last-child) { margin-right: $gap; }
+
+            &:nth-child(n+4) { // all but first 3
+              @include xl_ { display: none; }
+            }
+            
           }
         }
       }
