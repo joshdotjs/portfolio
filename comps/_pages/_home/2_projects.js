@@ -5,7 +5,9 @@ import projects from "data/projects";
 
 // ==============================================
 
-const Panel = ({ id, className, title, description, icon, img, logos }) => {
+const Panel = ({ project })  => {
+
+  const { id, className, title, description, icon, img, logos, links } = project;
 
   return (
     <div id={id} className={`panel ${className}`}>
@@ -26,7 +28,7 @@ const Panel = ({ id, className, title, description, icon, img, logos }) => {
           
           <div className="logos">
             { logos?.map((logo) => {
-              return (<img src={logo} className="logo" />);
+              return (<img key={logo} src={logo} className="logo" />);
             }) }
           </div>
         </div>
@@ -38,14 +40,10 @@ const Panel = ({ id, className, title, description, icon, img, logos }) => {
         {/* --------------------------------- */}
 
         <div className="btn-container">
-          <Button variant="full"  color="dark" href="/demos/ecommerce">Summary</Button>
-          <Button variant="empty" color="dark" href="https://www.php-web-app.com">Live Demo</Button>
-          <Button variant="empty" color="dark" href="/videos/ecommerce" className="sm-inline-block">Video</Button>
+          <Button variant="full"  color="dark" href={links.summary}>Summary</Button>
+          <Button variant="empty" color="dark" href={links.demo}>Live Demo</Button>
+          <Button variant="empty" color="dark" href={links.video} className="sm-inline-block">Video</Button>
         </div>
-
-        {/* --------------------------------- */}
-
-
 
         {/* --------------------------------- */}
 
@@ -74,10 +72,10 @@ export default function Hero() {
   return (
     <section id="projects">
       {
-        projects.map(({ id, img, title, description, icon, logos }) => {
+        projects.map((project) => {
           return (
-            <Fragment key={id}>
-              <Panel {...{ id, img, title, description, icon, logos }} />
+            <Fragment key={project.id}>
+              <Panel project={project} />
             </Fragment>
           );
         })

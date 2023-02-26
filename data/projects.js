@@ -20,6 +20,12 @@ const projects = [
       '/logos/gsap.svg',
       '/logos/vite.svg',
     ],
+    links: {
+      code:    'https://github.com/joshdotjs/php-web-app.com',
+      demo:    'https://www.php-web-app.com',
+      video:   '/videos/ecommerce/2023',
+      summary: '/demos/ecommerce',
+    },
   },
   {
     id: 'project-2',
@@ -39,6 +45,12 @@ const projects = [
       '/logos/sass.svg',
       '/logos/gsap.svg',
     ],
+    links: {
+      code:    'https://github.com/joshdotjs/portfolio',
+      demo:    'https://www.joshdotjs.com',
+      video:   '/videos/portfolio/2023',
+      summary: '/demos/portfolio',
+    },
   },
   // {
   //   id: 'project-3',
