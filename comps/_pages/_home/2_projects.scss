@@ -22,32 +22,69 @@ section#projects {
       grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
-    // - - - - - - - - - - - - - - - - - - - - - -
+    // ------------------------------------------
 
-    .left  {
-      // background: lightgreen;
-      
+    .left  {      
       align-self: center;
       justify-self: center;
 
+      // - - - - - - - - - - - - - - - - - - - - - -
 
-      @media (max-width: #{$xxl}) {
+      @media (max-width: #{$xl}) {
         padding-left: $gutter;
         padding-right: $gutter;
       }
+
+      // - - - - - - - - - - - - - - - - - - - - - -
+
       @media (min-width: #{$xl}) and (max-width: #{$xxl}) {
         padding-left: $gutter;
         padding-right: 0
       }
 
+      // - - - - - - - - - - - - - - - - - - - - - -
+
       @include xl {
-        // padding: 0;
-        // max-width: auto;
         justify-self: flex-start;
       }
+
+      // - - - - - - - - - - - - - - - - - - - - - -
+
+      .icon {
+        $size: 25px;
+        width: $size;
+        height: $size;
+        margin-bottom: 0.8rem;
+      }
+
+      // - - - - - - - - - - - - - - - - - - - - - -
+
+      .title {
+        margin-bottom: 0.6rem;
+      }
+
+      // - - - - - - - - - - - - - - - - - - - - - -
+
+      .description {
+        line-height: 1.6;
+        color: $text-grey-dark;
+        margin-bottom: 1rem;
+      }
+
+      // - - - - - - - - - - - - - - - - - - - - - -
+
+      .btn-container {
+        .btn:not(:last-child) {
+          margin-right: 1rem;
+        }
+        margin-bottom: 1rem;
+      }
+
+      // - - - - - - - - - - - - - - - - - - - - - -
+
     }
 
-    // - - - - - - - - - - - - - - - - - - - - - -
+    // ------------------------------------------
 
     .right {  position: relative;
       padding: $gutter;
@@ -56,9 +93,7 @@ section#projects {
 
       img {
         border-radius: $rad;
-
         width: 100%;
-
         @include xl {
           height: 700px;
           width: auto;
@@ -66,65 +101,31 @@ section#projects {
       }
     }
 
-    // - - - - - - - - - - - - - - - - - - - - - -
+    // ------------------------------------------
 
     @include xl {
       $space: 4rem;
 
       &:nth-child(odd) {
-        .left  {  order: 1; padding-right: $space; }
+        .left  {  order: 1; padding-right: $space;          }
         .right {  order: 2; img { justify-self: flex-end; } }
       }
   
       // - - - - - - - - - - - - - - - - - - - - - -
       
       &:nth-child(even) {
-        .left  {  order: 2; 
-          padding-left: $space; 
-        }
-        .right {  order: 1; 
-          justify-self: flex-end; 
-          img { 
-            // border: solid yellow 10px;
-          }
-        }
+        .left  {  order: 2; padding-left: $space;   }
+        .right {  order: 1; justify-self: flex-end; }
       }
     }
         
-    // - - - - - - - - - - - - - - - - - - - - - -
+    // ------------------------------------------
     
     &:not(:last-child) {
       margin-bottom: $section-margin;
     }
     
-    // - - - - - - - - - - - - - - - - - - - - - -
-
-    .left {
-      .icon {
-        $size: 25px;
-        width: $size;
-        height: $size;
-        margin-bottom: 0.8rem;
-      }
-      .title {
-        margin-bottom: 0.6rem;
-      }
-      .description {
-        line-height: 1.6;
-        color: $text-grey-dark;
-        margin-bottom: 1rem;
-      }
-      .btn-container {
-        .btn {
-          &:not(:last-child) {
-            margin-right: 1rem;
-          }
-        }
-        margin-bottom: 1rem;
-      }
-    }
-    
-    // - - - - - - - - - - - - - - - - - - - - - -
+    // ------------------------------------------
 
   }
 
