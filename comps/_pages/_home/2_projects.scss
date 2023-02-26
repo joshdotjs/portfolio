@@ -50,16 +50,36 @@ section#projects {
       // - - - - - - - - - - - - - - - - - - - - - -
 
       .icon {
-        $size: 25px;
+        $size: 28px;
         width: $size;
         height: $size;
-        margin-bottom: 0.8rem;
+        margin-bottom: 0.7rem;
       }
 
       // - - - - - - - - - - - - - - - - - - - - - -
 
-      .title {
-        margin-bottom: 0.6rem;
+      .title-container { //background: lightblue;
+        display: flex;
+        align-items: center;
+        // justify-content: space-between;
+        margin-bottom: 0.7rem;
+
+        $gap: 1rem;
+        .title {
+          font-size: $fs-700;
+          font-weight: 600;
+          line-height: 1;
+          margin-right: $gap;
+        }
+        
+        .logos { //background: lightgreen;
+          display: flex;
+          flex-grow: 1;
+          .logo {
+            height: calc(#{$fs-700} + 6px);//30px;
+            &:not(:last-child) { margin-right: $gap; }
+          }
+        }
       }
 
       // - - - - - - - - - - - - - - - - - - - - - -
@@ -78,6 +98,10 @@ section#projects {
         }
         margin-bottom: 1rem;
       }
+
+      // - - - - - - - - - - - - - - - - - - - - - -
+
+
 
       // - - - - - - - - - - - - - - - - - - - - - -
 
