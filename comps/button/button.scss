@@ -63,9 +63,13 @@
 
   svg {
     display: inline-block;
-    margin-right:  calc(#{$fs-md} - 4px);//1vw;//10px;
-    width: $fs-md;
-    height: $fs-md;
+    
+    $mr: calc(#{$fs-md} - 4px);
+    margin-right: $mr;
+
+    $size: calc(#{$fs-md} - 1px);
+    width: $size;
+    height: $size;
   }
 
   // - - - - - - - - - - - - - - - - - - - - - - 

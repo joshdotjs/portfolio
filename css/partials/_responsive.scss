@@ -25,6 +25,11 @@
   @include lg { display: inline-block; }
 }
 
+.lg-flex {
+  @include lg_ { @include d-none; }
+  @include lg { display: flex; }
+}
+
 // ==============================================
 
 .md-inline-block {

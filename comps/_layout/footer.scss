@@ -1,6 +1,6 @@
 @use 'css/partials/vars' as *;
 
-footer {  position: relative;
+footer {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -17,18 +17,4 @@ footer {  position: relative;
 
   // ==============================================
 
-  .socials {  position: absolute;
-    right: $gutter;
-    top: 50%;
-    transform: translateY(-50%);
-    display: flex;
-
-    .social {
-      display: flex;
-      &:not(:last-child) { margin-right: 1.75rem; }
-      svg { color: $text-grey-light; }
-    }
-  }
-
-  // ==============================================
 }
