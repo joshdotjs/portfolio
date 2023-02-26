@@ -1,5 +1,6 @@
 // ==============================================
 
+// spacing / dimensions:
 $pad: var(--pad);
 $max-w: var(--max-w);
 $gutter: var(--gutter);
@@ -7,9 +8,36 @@ $rad: var(--rad);
 $section-margin: var(--section-margin);
 $navbar-height: var(--navbar-height);
 
+// ==============================================
+
+// background-color:
 $grey: var(--grey);
 $bg-primary: var(--bg-primary);
 $bg-secondary: var(--bg-secondary);
 
+// ==============================================
+
+// text-color:
 $text-grey-light: var(--text-grey-light);
 $text-grey-dark: var(--text-grey-dark);
+
+// ==============================================
+
+// font-size:
+$fs-xxl: var(--fs-xxl);
+$fs-xl: var(--fs-xl);
+$fs-lg: var(--fs-lg);
+$fs-md: var(--fs-md);
+$fs-sm: var(--fs-sm);
+
+$fs-900: var(--fs-900);
+$fs-800: var(--fs-800);
+$fs-700: var(--fs-700);
+$fs-600: var(--fs-600);
+$fs-500: var(--fs-500);
+$fs-400: var(--fs-400);
+$fs-300: var(--fs-300);
+$fs-200: var(--fs-200);
+$fs-100: var(--fs-100);
+
+// ==============================================

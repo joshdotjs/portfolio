@@ -4,6 +4,22 @@
 
 // ==============================================
 
+// aggressive reset
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+// ==============================================
+
+html {
+  // default dark mode
+  color-scheme: dark light;
+}
+
+// ==============================================
+
 body {
   margin: 0;
   min-width: 325px;
@@ -23,6 +39,21 @@ ul {
   li { 
     list-style: none;
   }
+}
+
+// ==============================================
+
+// make media elements responsive
+img, picture, svg, video {
+  display: block;
+  max-width: 100%;
+}
+
+// ==============================================
+
+// make input elements inherit typography
+input, textarea, select, button {
+  font: inherit;
 }
 
 // ==============================================
