@@ -18,8 +18,11 @@ section#projects {
     display: grid;
 
     // grid-template-columns: 1fr;
+    
+
+
     @include xl {
-      grid-template-columns: 50% 50%; // needed for how I'm doing image off screen
+      grid-template-columns: 50% 50%;
     }
 
     // - - - - - - - - - - - - - - - - - - - - - -
@@ -30,7 +33,6 @@ section#projects {
       align-self: center;
       justify-self: center;
 
-      max-width: 500px;
 
       @media (max-width: #{$xxl}) {
         padding-left: $gutter;
@@ -43,7 +45,7 @@ section#projects {
 
       @include xl {
         // padding: 0;
-        max-width: auto;
+        // max-width: auto;
         justify-self: flex-start;
       }
     }
@@ -80,11 +82,13 @@ section#projects {
       // - - - - - - - - - - - - - - - - - - - - - -
       
       &:nth-child(even) {
-        .left  {  order: 2; padding-left: $space; }
+        .left  {  order: 2; 
+          padding-left: $space; 
+        }
         .right {  order: 1; 
+          justify-self: flex-end; 
           img { 
-            justify-self: flex-start; 
-            transform: translateX(-45%); 
+            // border: solid yellow 10px;
           }
         }
       }
