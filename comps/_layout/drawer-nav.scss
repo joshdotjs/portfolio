@@ -4,9 +4,9 @@
 
   // ============================================
 
-  .nav-drawer--blur-overlay {
+  .nav-drawer--blur-overlay {  position: fixed;
     $blur: blur(5px);
-    position: fixed;
+    
     top: 0;
     left: 0;
     width: 100vw;
@@ -21,8 +21,7 @@
 
   // ============================================
 
-  aside#nav-drawer {
-    position: fixed;
+  aside#nav-drawer {  position: fixed;
     top: 0;
     left: 0;
     height: 100vh;
@@ -36,7 +35,7 @@
 
     // ------------------------------------------
 
-    ul.socials { position: absolute;
+    ul.socials {  position: absolute;
       top: 20px;
       left: 50%;
       transform: translateX(-50%);
@@ -45,7 +44,7 @@
       .social {
         display: flex;
         &:not(:last-child) {
-          margin-right: 1rem;
+          margin-right: 1.75rem;
         }
         svg {
           color: black;
@@ -55,7 +54,7 @@
 
     // ------------------------------------------
 
-    ul.navlinks { position: absolute;
+    ul.navlinks {  position: absolute;
       left: 50%;
       transform: translateX(-50%);
       top: 32.5%;
