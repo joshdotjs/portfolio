@@ -92,10 +92,11 @@ section#projects {
 
       img {
         border-radius: $rad;
-        width: 100%;
+
+        @media (max-width: #{$xl}) { width: 100%; }
         @include xl {
           height: 700px;
-          width: auto;
+          max: auto !important;
         }
       }
     }
