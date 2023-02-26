@@ -1,0 +1,15 @@
+@use 'css/partials/mixins' as *;
+
+// ==============================================
+
+.desktop-inline {
+  display: none;
+  @include xl { display: inline; }
+}
+
+.desktop-block {
+  display: none;
+  @include xl { display: block; }
+}
+
+// ==============================================

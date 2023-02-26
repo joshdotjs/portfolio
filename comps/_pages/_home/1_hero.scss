@@ -65,11 +65,12 @@ section#hero {  position: relative;
     // ------------------------------------------
   
     .right {
-      margin-right: 20%;
       display: flex;
       flex-direction: column;
       justify-content: center;
       width: fit-content;
+
+      @include xl { margin-right: 20%; }
   
       .suer-title,
       .title,
