@@ -35,6 +35,39 @@
 
 // ==============================================
 
+@mixin sm_ {
+  @media screen and (max-width: #{$sm}) {
+    @content;
+  }
+}
+
+@mixin md_ {
+  @media screen and (max-width: #{$md}) {
+    @content;
+  }
+}
+
+@mixin lg_ {
+  @media screen and (max-width: #{$lg}) {
+    @content;
+  }
+}
+
+@mixin xl_ {
+  @media screen and (max-width: #{$xl}) {
+    @content;
+  }
+}
+
+@mixin xxl_ {
+  @media screen and (max-width: #{$xxl}) {
+    @content;
+  }
+}
+
+// ==============================================
+
+
 @mixin max-width {
   max-width: $max-w;
   margin: 0 auto;

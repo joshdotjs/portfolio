@@ -2,14 +2,39 @@
 
 // ==============================================
 
-.desktop-inline {
-  display: none;
+@mixin d-none {
+  display: none !important;
+}
+
+// ==============================================
+
+.xl-inline {
+  @include xl_ { @include d-none; }
   @include xl { display: inline; }
 }
 
-.desktop-block {
-  display: none;
+.xl-block {
+  @include xl_ { @include d-none; }
   @include xl { display: block; }
 }
 
 // ==============================================
+
+.lg-inline-block {
+  @include lg_ { @include d-none; }
+  @include lg { display: inline-block; }
+}
+
+// ==============================================
+
+.md-inline-block {
+  @include md_ { @include d-none; }
+  @include md { display: inline-block; }
+}
+
+// ==============================================
+
+.sm-inline-block {
+  @include sm_ { @include d-none; }
+  @include sm { display: inline-block; }
+}

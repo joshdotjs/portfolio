@@ -18,8 +18,8 @@ const Panel = ({ id, className, title, description, icon, img }) => {
 
         <div className="btn-container">
           <Button variant="full"  color="dark" href="/demos/ecommerce">Summary</Button>
-          <Button variant="empty" color="dark" href="https://www.php-web-app.com"><span className="desktop-inline">Live </span>Demo</Button>
-          <Button variant="empty" color="dark" href="/videos/ecommerce">Video</Button>
+          <Button variant="empty" color="dark" href="https://www.php-web-app.com">Live Demo</Button>
+          <Button variant="empty" color="dark" href="/videos/ecommerce" className="sm-inline-block">Video</Button>
         </div>
 
       </div>
