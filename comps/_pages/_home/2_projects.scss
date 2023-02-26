@@ -65,11 +65,22 @@ section#projects {
         margin-bottom: 0.7rem;
 
         $gap: 1rem;
+        
         .title {
           font-size: $fs-700;
           font-weight: 600;
           line-height: 1;
           margin-right: $gap;
+
+
+          &.mobile {
+            @include xl_ { display: inline; }
+            @include xl  { display: none; }
+          }
+          &.desktop {
+            @include xl_ { display: none; }
+            @include xl  { display: inline; }
+          }
         }
         
         .logos { //background: lightgreen;

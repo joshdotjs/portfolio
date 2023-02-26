@@ -7,7 +7,7 @@ import projects from "data/projects";
 
 const Panel = ({ project })  => {
 
-  const { id, className, title, description, icon, img, logos, links } = project;
+  const { id, className, title, title_mobile, description, icon, img, logos, links } = project;
 
   return (
     <div id={id} className={`panel ${className}`}>
@@ -24,7 +24,8 @@ const Panel = ({ project })  => {
 
         <div className="title-container">
           
-          <h2 className="title">{ title }</h2>
+          <h2 className="title mobile">{ title_mobile }</h2>
+          <h2 className="title desktop">{ title }</h2>
           
           <div className="logos">
             { logos?.map((logo) => {

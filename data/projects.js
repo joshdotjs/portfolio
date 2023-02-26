@@ -5,6 +5,7 @@ const projects = [
     id: 'project-1',
     img: '/img/code-react.png',
     title: 'eCommerce Store',
+    title_mobile: 'eCommerce',
     description: `
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc vel tincidunt lacinia, nunc nisl aliquam nisl, vel aliquam nunc nisl eu nunc. Sed euismod, nunc vel tincidunt lacinia, nunc nisl aliquam nisl, vel aliquam nunc nisl eu nunc.
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea obcaecati aspernatur, fugiat impedit doloribus eius in laborum quos distinctio voluptatibus consectetur quo suscipit officia cumque, ipsa fuga repudiandae unde. Aspernatur esse non nulla ipsam aliquid asperiores, temporibus officiis eius debitis labore magnam ipsum nihil at hic nobis ad fugit cupiditate consequuntur et totam laboriosam quibusdam corrupti explicabo necessitatibus! Libero earum veniam, modi natus, ut nemo, obcaecati atque cum iusto deserunt repudiandae temporibus quasi a nesciunt! Ut sunt esse natus, culpa voluptatibus similique dicta est modi mollitia optio pariatur quibusdam sapiente magnam, doloribus harum velit ex expedita corrupti inventore repellendus id.
@@ -31,7 +32,8 @@ const projects = [
     id: 'project-2',
     img: '/img/code-react.png',
     title: 'Portfolio',
-        description: `
+    title_mobile: 'Portfolio',
+    description: `
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc vel tincidunt lacinia, nunc nisl aliquam nisl, vel aliquam nunc nisl eu nunc. Sed euismod, nunc vel tincidunt lacinia, nunc nisl aliquam nisl, vel aliquam nunc nisl eu nunc.
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea obcaecati aspernatur, fugiat impedit doloribus eius in laborum quos distinctio voluptatibus consectetur quo suscipit officia cumque, ipsa fuga repudiandae unde. Aspernatur esse non nulla ipsam aliquid asperiores, temporibus officiis eius debitis labore magnam ipsum nihil at hic nobis ad fugit cupiditate consequuntur et totam laboriosam quibusdam corrupti explicabo necessitatibus! Libero earum veniam, modi natus, ut nemo, obcaecati atque cum iusto deserunt repudiandae temporibus quasi a nesciunt! Ut sunt esse natus, culpa voluptatibus similique dicta est modi mollitia optio pariatur quibusdam sapiente magnam, doloribus harum velit ex expedita corrupti inventore repellendus id.
     `,
