@@ -24,7 +24,11 @@ const Panel = ({ id, className, title, description, icon, img }) => {
 
       </div>
       
-      <div className="right">
+      <div className="right" 
+        // style={{ height: '100%', width: '100%', background: 'red', aspectRatio: '1', 
+        // transform: 'translateX(50%)'
+      // }}
+      >
         <img src={img}/>
       </div>
     </div>  
