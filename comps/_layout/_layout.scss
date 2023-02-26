@@ -1,6 +1,11 @@
+@use 'css/partials/vars' as *;
+
+// ==============================================
+
 body {
   // overflow-x: clip;
   overflow-x: hidden;
+  background: $bg-primary;
 
   header { position: fixed;
     z-index: 10;

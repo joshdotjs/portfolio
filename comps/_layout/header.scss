@@ -14,8 +14,8 @@ header {
   background-color: rgba(17, 25, 40, 0.75);
   border-bottom: 1px solid rgba(255, 255, 255, 0.125);
   color: white;
-  border-top: 1px solid transparent;
-  margin-top: -1px; // offset upwards a little to hide the edge effect (it is very evident between the top and bottom), cover with the top navbar
+  // border-top: 1px solid transparent;
+  // margin-top: -1px; // offset upwards a little to hide the edge effect (it is very evident between the top and bottom), cover with the top navbar
 
 
   > div { // container
