@@ -1,8 +1,10 @@
+@use 'css/partials/vars' as *;
+
 #portal-nav-drawer {
 
   // ============================================
 
-  .blur-overlay {
+  .nav-drawer--blur-overlay {
     $blur: blur(5px);
     position: fixed;
     top: 0;
@@ -19,7 +21,7 @@
 
   // ============================================
 
-  aside {
+  aside#nav-drawer {
     position: fixed;
     top: 0;
     left: 0;
@@ -29,12 +31,34 @@
     // overflowY: 'scroll',
     display: flex;
     width: 200px;
-    background: lightgreen;
+    background: $bg-primary;
+    color: black;
+
+    // ------------------------------------------
+
+    ul.socials { position: absolute;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      
+      .social {
+        display: flex;
+        &:not(:last-child) {
+          margin-right: 1rem;
+        }
+        svg {
+          color: black;
+        }
+      }
+    }
+
+    // ------------------------------------------
 
     ul.navlinks { position: absolute;
       left: 50%;
       transform: translateX(-50%);
-      top: 40%;
+      top: 32.5%;
       // background: orange;
       
       .navlink {
@@ -51,7 +75,6 @@
 
 
         &__interior { 
-          // background: red;
           cursor: pointer;
 
           width: fit-content;
@@ -67,14 +90,16 @@
           ;
 
           &.active {
-            border-bottom: $offset solid white;
-            color: white;
+            border-bottom: $offset solid black;
+            font-weight: 500;
             pointer-events: none;
           }
         }
         
       }
     }
+
+    // ------------------------------------------
   }
 
   // ============================================
