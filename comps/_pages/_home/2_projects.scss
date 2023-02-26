@@ -26,9 +26,10 @@ section#projects {
     // - - - - - - - - - - - - - - - - - - - - - -
 
     .left  {
-      // background: green;
+      // background: lightgreen;
       
       justify-self: center;
+      align-self: center;
 
 
       max-width: 500px;
@@ -60,15 +61,17 @@ section#projects {
     // - - - - - - - - - - - - - - - - - - - - - -
 
     @include xl {
+      $space: 4rem;
+
       &:nth-child(odd) {
-        .left  {  order: 1; }
+        .left  {  order: 1; padding-right: $space; }
         .right {  order: 2; img { justify-self: flex-end; } }
       }
   
       // - - - - - - - - - - - - - - - - - - - - - -
       
       &:nth-child(even) {
-        .left  {  order: 2; }
+        .left  {  order: 2; padding-left: $space; }
         .right {  order: 1; 
           img { 
             justify-self: flex-start; 
@@ -88,11 +91,19 @@ section#projects {
 
     .left {
       .icon {
-        width: 50px;
-        height: 50px;
+        $size: 25px;
+        width: $size;
+        height: $size;
+        margin-bottom: 0.8rem;
       }
-      .title {}
-      .description {}
+      .title {
+        margin-bottom: 0.6rem;
+      }
+      .description {
+        margin-bottom: 1rem;
+        line-height: 1.6;
+        color: $text-grey-dark;
+      }
       .btn-container {
         .btn {
           &:not(:last-child) {
