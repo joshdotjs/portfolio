@@ -74,12 +74,12 @@ section#projects {
 
 
           &.mobile {
-            @include xl_ { display: inline; }
-            @include xl  { display: none; }
+            @include sm_ { display: inline; }
+            @include sm  { display: none; }
           }
           &.desktop {
-            @include xl_ { display: none; }
-            @include xl  { display: inline; }
+            @include sm_ { display: none; }
+            @include sm  { display: inline; }
           }
         }
         
@@ -91,7 +91,7 @@ section#projects {
             &:not(:last-child) { margin-right: $gap; }
 
             &:nth-child(n+4) { // all but first 3
-              @include xl_ { display: none; }
+              @include sm_ { display: none; }
             }
             
           }
