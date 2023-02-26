@@ -4,7 +4,7 @@ import Button from "comps/button/button";
 
 export default function Hero() {
   return (
-    <section id="hero" className="hero-gutters">
+    <section id="hero">
 
       <div className="overlay"></div>
 

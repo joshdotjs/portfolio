@@ -1,17 +1,19 @@
 @use 'css/partials/vars' as *;
 @use 'css/partials/mixins' as *;
 
+
 section#hero {  position: relative;
   * { margin: 0; }
-  padding: $section-margin  $pad;
+  // padding: $section-margin  $pad;
   color: white;
 
   min-height: 100vh;
+  width: 100vw;
 
   @include xl {
-    border-radius: $rad;
+
     overflow: hidden;
-    min-height: 60vh;
+    // min-height: 60vh;
   }
 
   background-image: url('/img/AdobeStock_504342231_1920x1280.webp');
@@ -49,7 +51,7 @@ section#hero {  position: relative;
     display: flex;
     justify-content: center;
     svg {
-      width: 70%;
+      width: 100%;
       // height: 100%;
     }
 

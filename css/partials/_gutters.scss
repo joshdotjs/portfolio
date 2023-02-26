@@ -19,16 +19,3 @@ header {
     @include max-width;
   }
 }
-
-// ==============================================
-
-.hero-gutters {
-  @include max-width;
-  padding: 0 $gutter;
-}
-
-// ==============================================
-
-// .gutter-left {
-//   @include max-width-left;
-// }

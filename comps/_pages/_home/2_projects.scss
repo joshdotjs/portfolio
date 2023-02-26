@@ -31,9 +31,18 @@ section#projects {
       justify-self: center;
 
       max-width: 500px;
-      padding: $pad;
+
+      @media (max-width: #{$xxl}) {
+        padding-left: $gutter;
+        padding-right: $gutter;
+      }
+      @media (min-width: #{$xl}) and (max-width: #{$xxl}) {
+        padding-left: $gutter;
+        padding-right: 0
+      }
+
       @include xl {
-        padding: 0;
+        // padding: 0;
         max-width: auto;
         justify-self: flex-start;
       }
@@ -42,7 +51,7 @@ section#projects {
     // - - - - - - - - - - - - - - - - - - - - - -
 
     .right {  position: relative;
-      padding: $pad;
+      padding: $gutter;
       padding-top: 0; 
       @include xl { padding: 0; }
 
@@ -110,7 +119,7 @@ section#projects {
             margin-right: 1rem;
           }
         }
-        margin-bottom: 0.15rem;
+        margin-bottom: 1rem;
       }
     }
     
