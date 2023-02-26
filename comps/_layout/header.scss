@@ -6,11 +6,15 @@
 header { 
   width: 100vw;
   height: $navbar-height;
+  display: flex;
+  align-items: center;;
 
   > div { // container
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background: orange;
+    width: 100%;
 
     .logo {
       height: 40px;
@@ -68,10 +72,18 @@ header {
       }
     }
     ul.socials {
-      a.social svg {
-        transition: color 0.125 ease;
-        &:hover {
-          color: white;
+
+      background: yellow;
+      display: flex;
+      align-items: center;
+
+      a.social  {
+        display: flex;       
+        svg {
+          transition: color 0.125 ease;
+          &:hover {
+            color: white;
+          }
         }
       }
     }
