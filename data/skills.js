@@ -8,7 +8,7 @@ const skills = [
       `Vanilla JavaScript, TypeScript, and ES6+.`,
       `Both frontend and backend (Node).`
     ],
-    logo: '/logos/JS.svg',
+    logo: '/logos/js.svg',
   },
   {
     // id: 'skill-1',
