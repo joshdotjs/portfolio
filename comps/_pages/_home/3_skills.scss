@@ -1,0 +1,65 @@
+@use 'css/partials/vars' as *;
+@use 'css/partials/mixins' as *;
+@use 'css/partials/breakpoints' as *;
+
+section#skills {
+  // padding: $section-margin  $pad;
+  color: black;
+  // border: dashed tomato 3px;
+  
+  @include gradient;
+  padding: calc(#{$section-margin} / 2) 0;
+
+  .container {
+
+    @include xxl_ { padding: $gutter; }
+    @include xxl { @include max-width; }
+    
+    // ============================================
+    
+    .skills-container {
+      
+      // border: solid lightblue 2px;
+
+      display: grid;
+      gap: 3rem;
+      
+      @include sm_ {
+        grid-template-columns: 1fr;
+      }
+      @include sm {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      @include xl {
+        grid-template-columns: repeat(4, 1fr);
+      }
+      
+      .skill {
+        // border: solid tomato 2px;
+        
+        img {
+          // background: blue;
+          height: 45px;
+          margin-bottom: 0.75rem;
+        }
+
+        .title {
+          color: white;
+          font-size: $fs-500;
+          font-weight: 500;
+          margin-bottom: 0.75rem;
+        }
+
+        .description {
+          font-size: $fs-400;
+          font-weight: 400;
+          color: $text-purple-light;
+        }
+        
+      } // .skill
+    }// .skills-container
+    
+    // ============================================
+
+  } // .scontainer
+} // #skills

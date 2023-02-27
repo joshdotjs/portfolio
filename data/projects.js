@@ -38,8 +38,8 @@ const projects = [
     title: 'Portfolio',
     title_mobile: 'Portfolio',
     description: [
-      `This demo is built with entirely custom CSS (SCSS) and zero libraries other than GSAP.`,
-      `Nextjs is used with server side rendering.`,
+      `This demo is built with entirely custom CSS (SCSS) and no libraries other than GSAP and Next.js.`,
+      `Next.js is used with server side rendering.`,
     ],
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="icon bi bi-file-earmark" viewBox="0 0 16 16">
@@ -53,7 +53,7 @@ const projects = [
     ],
     links: {
       code:    'https://github.com/joshdotjs/portfolio',
-      demo:    'https://www.joshdotjs.com',
+      demo:    '/demos/portfolio',//'https://www.joshdotjs.com',
       video:   '/videos/portfolio/2023',
       summary: '/demos/portfolio',
     },

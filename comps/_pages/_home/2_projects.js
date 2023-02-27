@@ -36,8 +36,7 @@ const Panel = ({ project })  => {
 
         {/* --------------------------------- */}
 
-        {/* <p className="description">{ description.join('\n') }</p> */}
-        <div id="description">
+        <div className="description">
           { description.map((line, idx) => {
             const key = `${id}-line-${idx}`;
             return <p key={key} className="description-line">{line}</p>
@@ -75,7 +74,7 @@ const Panel = ({ project })  => {
 
 // ==============================================
 
-export default function Hero() {
+export default function Projects() {
   return (
     <section id="projects">
       {

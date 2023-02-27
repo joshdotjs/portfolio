@@ -3,6 +3,12 @@
 
 // ==============================================
 
+@mixin xs {
+  @media screen and (min-width: #{$xs}) {
+    @content;
+  }
+}
+
 @mixin sm {
   @media screen and (min-width: #{$sm}) {
     @content;
@@ -34,6 +40,12 @@
 }
 
 // ==============================================
+
+@mixin xs_ {
+  @media screen and (max-width: #{$xs}) {
+    @content;
+  }
+}
 
 @mixin sm_ {
   @media screen and (max-width: #{$sm}) {
@@ -70,6 +82,17 @@
 @mixin max-width {
   max-width: $max-w;
   margin: 0 auto;
+}
+
+// ==============================================
+
+@mixin gradient {
+  background-color: #6b21a8;
+  --gradient-from: #6b21a8;
+  // --gradient-to: rgb(107 33 168 / 0);
+  --gradient-to: #4338ca;
+  --gradient-stops: var(--gradient-from), var(--gradient-to);
+  background-image: linear-gradient(to right, var(--gradient-stops));
 }
 
 // ==============================================
