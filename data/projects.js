@@ -38,8 +38,8 @@ const projects = [
     title: 'Portfolio',
     title_mobile: 'Portfolio',
     description: [
-      `This demo is a custom storefront built with React and Laravel. The product data, ordering system, and checkout flow use a custom Laravel backend built from scratch.`,
-      `Credit Card transactions are processed with the Stripe API. Next.js API routes are used as well as dedicated REST API endpoints located on a remote server. The native JavaScript Fetch API is used for all API calls.`,
+      `This demo is built with entirely custom CSS (SCSS) and zero libraries other than GSAP.`,
+      `Nextjs is used with server side rendering.`,
     ],
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="icon bi bi-file-earmark" viewBox="0 0 16 16">
