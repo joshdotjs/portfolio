@@ -36,7 +36,13 @@ const Panel = ({ project })  => {
 
         {/* --------------------------------- */}
 
-        <p className="description">{ description }</p>
+        {/* <p className="description">{ description.join('\n') }</p> */}
+        <div id="description">
+          { description.map((line, idx) => {
+            const key = `${id}-line-${idx}`;
+            return <p key={key} className="description-line">{line}</p>
+          })}
+        </div>
 
         {/* --------------------------------- */}
 
