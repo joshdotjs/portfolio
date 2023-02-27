@@ -29,22 +29,9 @@ section#projects {
 
       // - - - - - - - - - - - - - - - - - - - - - -
 
-      @media (max-width: #{$xl}) {
+      @include xxl_ {
         padding-left: $gutter;
         padding-right: $gutter;
-      }
-
-      // - - - - - - - - - - - - - - - - - - - - - -
-
-      @media (min-width: #{$xl}) and (max-width: #{$xxl}) {
-        padding-left: $gutter;
-        padding-right: 0
-      }
-
-      // - - - - - - - - - - - - - - - - - - - - - -
-
-      @include xl {
-        justify-self: flex-start;
       }
 
       // - - - - - - - - - - - - - - - - - - - - - -
