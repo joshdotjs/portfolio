@@ -18,6 +18,8 @@ export default function Layout({ id, children }) {
 
   useEffect(() => {
     
+    console.warn('router.events: ', router.events);
+
     // - - - - - - - - - - - - - - - - - - - - - 
 
     const transitionPageIn = () => {

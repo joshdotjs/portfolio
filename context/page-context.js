@@ -27,9 +27,9 @@ const PageContextProvider = ({ children }) => {
   const page_index = getPageindex(router.pathname);
   const [active_page, setActivePage] = useState(page_index);
 
-  // useEffect(() => {
-  //   console.log('context - active_page: ', active_page);
-  // }, [active_page]);
+  useEffect(() => {
+    console.log('context - active_page: ', active_page);
+  }, [active_page]);
 
   // --------------------------------------------
 
