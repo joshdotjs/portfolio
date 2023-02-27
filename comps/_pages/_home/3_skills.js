@@ -5,7 +5,7 @@ import skills from "data/skills";
 
 // ==============================================
 
-const Skill = ({ skill: { id, title, description, logo } })  => {
+const Skill = ({ idx, skill: { title, description, logo } })  => {
   
 
   return (
@@ -22,8 +22,8 @@ const Skill = ({ skill: { id, title, description, logo } })  => {
       {/* --------------------------------- */}
 
       <div className="description">
-        { description.map((line, idx) => {
-          const key = `${id}-line-${idx}`;
+        { description.map((line, jdx) => {
+          const key = `skill-${idx}-line-${jdx}`;
           return <p key={key} className="skill-description-line">{line}</p>
         })}
       </div>
@@ -44,10 +44,11 @@ export default function Skills() {
         <div className="title-container"></div>
 
         <div className="skills-container">
-          { skills.map((skill) => {
+          { skills.map((skill, idx) => {
+            const key = `skill-${idx}`;
             return (
-              <Fragment key={skill.id}>
-                <Skill skill={skill} />
+              <Fragment key={key}>
+                <Skill idx={idx} skill={skill} />
               </Fragment>
             );
           }) }

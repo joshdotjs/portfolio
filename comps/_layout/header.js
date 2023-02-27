@@ -148,9 +148,7 @@ export default function Header() {
         </div>
       </header>
 
-      <NavDrawer 
-        // {...{active_page, setActivePage}} 
-      />
+      <NavDrawer />
     </>
   );
 

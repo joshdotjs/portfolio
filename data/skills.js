@@ -2,7 +2,16 @@
 
 const skills = [
   {
-    id: 'skill-1',
+    // id: 'skill-8',
+    title: 'JavaScript',
+    description: [
+      `Vanilla JavaScript, TypeScript, and ES6+.`,
+      `Both frontend and backend (Node).`
+    ],
+    logo: '/logos/JS.svg',
+  },
+  {
+    // id: 'skill-1',
     title: 'React',
     description: [
       `React via WebPack or C.R.A.`,
@@ -11,7 +20,7 @@ const skills = [
     logo: '/logos/react.svg',
   },
   {
-    id: 'skill-2',
+    // id: 'skill-2',
     title: 'Web Components',
     description: [
       `Custom native HTML elements for modular, reusable, and encapsulated components without any libraries or framework`,
@@ -19,7 +28,7 @@ const skills = [
     logo: '/logos/web-comps-2.svg',
   },
   {
-    id: 'skill-3',
+    // id: 'skill-3',
     title: 'GSAP',
     description: [
       'JavaScript animations with GSAP including ScrollTrigger, ScrollSmoother, and FLIP'
@@ -27,16 +36,16 @@ const skills = [
     logo: '/logos/gsap.svg',
   },
   {
-    id: 'skill-4',
+    // id: 'skill-4',
     title: 'Shopify',
     description: [
       `Custom storefronts with the GraphQL based Storefront API.`,
-      `Also familiar with Shopify themes via Liquid.`
+      `Also familiar with Shopify theme development via Liquid.`
     ],
     logo: '/logos/shopify.svg',
   },
   {
-    id: 'skill-5',
+    // id: 'skill-5',
     title: 'SQL',
     description: [
       `SQL with PostgreSQL, MySQL, and SQLite.`,
@@ -45,7 +54,7 @@ const skills = [
     logo: '/logos/postgres.svg',
   },
   {
-    id: 'skill-6',
+    // id: 'skill-6',
     title: 'Laravel',
     description: [
       `Custom backends built with Laravel on top of PHP`
@@ -53,21 +62,13 @@ const skills = [
     logo: '/logos/laravel.svg',
   },
   {
-    id: 'skill-7',
+    // id: 'skill-7',
     title: 'Node',
     description: [
       `Custom backends built with Express.js on top of Node.js`
     ],
     logo: '/logos/node.svg',
-  },
-  {
-    id: 'skill-8',
-    title: 'JavaScript',
-    description: [
-      `Vanilla JavaScript, TypeScript, and ES6+`
-    ],
-    logo: '/logos/JS.svg',
-  },
+  }
 ];
 
 // ==============================================

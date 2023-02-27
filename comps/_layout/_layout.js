@@ -17,8 +17,6 @@ export default function Layout({ id, children }) {
   const { page_ref, footer_ref } = useContext(PageContext);
 
   useEffect(() => {
-    
-    console.warn('router.events: ', router.events);
 
     // - - - - - - - - - - - - - - - - - - - - - 
 
