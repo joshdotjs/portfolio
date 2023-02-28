@@ -10,11 +10,13 @@ import 'comps/_layout/drawer-nav.scss';
 import 'comps/_pages/_home/_home-page.scss';
 import 'comps/_pages/portfolio/portfolio-page.scss';
 import 'comps/_pages/contact/contact-page.scss';
-import 'comps/_pages/demos/portfolio-demo/portfolio-demo.scss';
-import 'pages/videos/ecommerce/2023.scss';
 
 // Comps:
 import 'comps/button/button.scss';
+import 'comps/project/project.scss';
+
+// TO DELETE - merge with projects.scss
+import 'pages/videos/ecommerce/2023.scss';
 
 // ==============================================
 
