@@ -51,3 +51,8 @@
   @include sm_ { @include d-none; }
   @include sm { display: inline-block; }
 }
+
+.sm-inline {
+  @include sm_ { @include d-none; }
+  @include sm { display: inline; }
+}
