@@ -29,6 +29,7 @@ const projects = [
       code:    'https://github.com/joshdotjs/php-web-app.com',
       demo:    'https://www.php-web-app.com',
       video:   '/videos/ecommerce/2023',
+      youtube: 'https://www.youtube.com/embed/pBkmgFk0uno',
       summary: '/demos/ecommerce/laravel',
     },
     bullets: [
