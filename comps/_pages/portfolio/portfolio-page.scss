@@ -1,0 +1,15 @@
+@use 'css/partials/mixins' as *;
+@use 'css/partials/vars' as *;
+
+// ==============================================
+
+main#portfolio.page {
+
+  @import 'comps/_pages/_home/2_projects.scss';
+
+  section {
+    margin-top:   calc(#{$section-margin} / 2);
+    margin-bottom: calc(#{$section-margin} / 2);
+  }
+
+}

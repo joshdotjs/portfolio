@@ -1,0 +1,16 @@
+@use 'css/partials/mixins' as *;
+@use 'css/partials/vars' as *;
+
+// ==============================================
+
+main#contact.page {
+
+  section {
+    margin-bottom: $section-margin;
+    color: black;
+    display: grid;
+    place-items: center;
+    height: 100%;
+  }
+
+}
