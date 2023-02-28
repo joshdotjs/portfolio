@@ -31,6 +31,19 @@ const projects = [
       video:   '/videos/ecommerce/2023',
       summary: '/demos/ecommerce/laravel',
     },
+    bullets: [
+      `Frontend: React with Vite`,
+      `Backend: Laravel`,
+      `Animations are custom built — most use advanced GSAP techniques`,
+      `Embedded Adobe After Effects custom loading animation`,
+      `Mostly custom CSS (with some Tailwind)`,
+      `User-facing storefront for customers to view/filter/sort products, place items in an interactive shopping cart and place orders with an online payment system`,
+      `Admin-facing dashboard for product and order logistics`,
+      `Stripe credit card transactions including Buy Now Pay Later (BNPL) with Klarna using web-hooks to update the status of orders`,
+      `Custom server-side rendering (SSR) by rendering a subset of products on the initial page load — subsequent product retrieval via AJAX requests after the page has been hydrated with JavaScript — this is good for SEO and initial page load speed`,
+      `JWT based authentication using local storage`,
+      `Cryptographically hashed passwords via Bcrypt for secure login/registration`,
+    ],
   },
   {
     id: 'project-2',
@@ -53,10 +66,11 @@ const projects = [
     ],
     links: {
       code:    'https://github.com/joshdotjs/portfolio',
-      demo:    '/demos/portfolio',//'https://www.joshdotjs.com',
+      demo:    'https://www.joshdotjs.com',
       // video:   '/videos/portfolio/2023',
-      summary: '/demos/portfolio',
+      summary: '/demos/portfolio-demo',
     },
+    bullets: [],
   },
 ];
 
