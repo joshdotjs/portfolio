@@ -11,7 +11,9 @@ import { getPageindex } from "data/routes";
 export default function Button({ variant, color, href, onClick=()=>{}, className, children }) {
 
   // href => if href is provided, render an anchor tag
-  // onClic => if href not supplied, then run onClick when <button/> is clicked
+  // onClick => if href not supplied, then run onClick when <button/> is clicked
+
+  // href: string -- first character determines if internal or external link [/ => internal, !/ => external]
 
   // variant: 'full' | 'empty'
   // color: 'dark' | 'light'
@@ -28,14 +30,19 @@ export default function Button({ variant, color, href, onClick=()=>{}, className
     // - - - - - - - - - - - - - - - - - - - - - 
 
     const transitionPageOut = () => {
-      const page = page_ref.current;
-      gsap.to(page, {
-        x: '100px',
-        opacity: 0,
-        onComplete: () => {
-          router.push(href);
-        },
-      });
+
+      if (href.charAt(0) === '/') { // internal link
+        const page = page_ref.current;
+        gsap.to(page, {
+          x: '100px',
+          opacity: 0,
+          onComplete: () => {
+            router.push(href);
+          },
+        });
+      } else { // external link
+        window.open(href, '_blank');
+      } 
     };
 
     // - - - - - - - - - - - - - - - - - - - - - 
