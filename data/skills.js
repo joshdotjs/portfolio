@@ -14,7 +14,7 @@ const skills = [
     // id: 'skill-1',
     title: 'React',
     description: [
-      `React via WebPack or C.R.A.`,
+      `React via WebPack, Vite, and C.R.A.`,
       `Next.js utilizing Server Side Rendering (SSR), Static Site Generation (SSG), and Incremental Static Regeneration (ISR).`
     ],
     logo: '/logos/react.svg',
