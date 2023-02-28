@@ -11,7 +11,7 @@ const projects = [
       `Credit card transactions are processed with the Stripe API, including Buy Now Pay Later (BNPL) with Klarna using web-hooks to update the status of orders in real-time.`,
       `Animations are custom built — most use advanced GSAP techniques.`,
       // `There is a user-facing storefront for customers to view/filter/sort products, place items in an interactive shopping cart and place orders with an online payment system as well as an admin-facing dashboard for product and order logistics.`,
-      `Custom server-side rendering (SSR) is achieved by rendering a subset of products on the initial page load — subsequent product retrieval is achieved via AJAX requests via the native fetch API after the page has been hydrated with JavaScript.`,
+      `Custom server-side rendering (SSR) is achieved by rendering a subset of products on the initial page load — subsequent product retrieval is achieved via AJAX requests with the native fetch API after the page has been hydrated with JavaScript.`,
       `The app features JWT based authentication using local storage and cryptographically hashed passwords via Bcrypt for secure login/registration.`,
     ],
     icon: (
