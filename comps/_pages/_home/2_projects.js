@@ -46,9 +46,9 @@ const Panel = ({ project })  => {
         {/* --------------------------------- */}
 
         <div className="btn-container">
-          <Button variant="full"  color="dark" href={links.summary}>Summary</Button>
-          <Button variant="empty" color="dark" href={links.demo}>Live Demo</Button>
-          <Button variant="empty" color="dark" href={links.video} className="sm-inline-block">Video</Button>
+          <Button variant="full"  color="dark" href={links.summary}><span className="xxl-inline">Live </span>Demo</Button>
+          <Button variant="empty" color="dark" href={links.code}>Code</Button>
+          { links?.video && <Button variant="empty" color="dark" href={links.video} >Video</Button> }
         </div>
 
         {/* --------------------------------- */}

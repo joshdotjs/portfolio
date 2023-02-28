@@ -8,10 +8,18 @@
 
 // ==============================================
 
+.xxl-inline {
+  @include xxl_ { @include d-none; }
+  @include xxl { display: inline; }
+}
+
+// ==============================================
+
 .xl-inline {
   @include xl_ { @include d-none; }
   @include xl { display: inline; }
 }
+
 
 .xl-block {
   @include xl_ { @include d-none; }

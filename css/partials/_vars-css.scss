@@ -5,6 +5,7 @@
 :root {
   --pad: 1rem;
   --max-w: #{$xxl};
+  --min-w: 365px; // iPhone SE: 375px
   --gutter: 2rem;
   --rad: 12px;
   
