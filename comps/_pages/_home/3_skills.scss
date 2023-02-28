@@ -54,6 +54,10 @@ section#skills {
           font-size: $fs-400;
           font-weight: 400;
           color: $text-purple-light;
+
+          &-line {
+            margin-bottom: 0.5rem;
+          }
         }
         
       } // .skill

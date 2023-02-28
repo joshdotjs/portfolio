@@ -24,7 +24,7 @@ const Skill = ({ idx, skill: { title, description, logo } })  => {
       <div className="description">
         { description.map((line, jdx) => {
           const key = `skill-${idx}-line-${jdx}`;
-          return <p key={key} className="skill-description-line">{line}</p>
+          return <p key={key} className="description-line">{line}</p>
         })}
       </div>
 
