@@ -8,15 +8,20 @@ export default function eCommerceDemoVideoPage() {
 
   return (
     <Layout id="videos--ecommerce">
-      <section>
-        <iframe 
-          width="560" height="315" 
-          src="https://www.youtube.com/embed/pBkmgFk0uno" 
-          title="YouTube video player" 
-          frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-          allowfullscreen
+
+        <div className="video-container">
+          <iframe 
+            // width="560" 
+            // height="315" 
+            width="100%" height="100%"
+            src="https://www.youtube.com/embed/pBkmgFk0uno" 
+            title="YouTube video player" 
+            // frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            allowFullScreen
           ></iframe>
-      </section>
+        </div>
+
     </Layout>
   );
 
