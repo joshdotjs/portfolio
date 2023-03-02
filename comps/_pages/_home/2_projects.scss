@@ -151,14 +151,15 @@ section#projects {
         
     // ------------------------------------------
     
+    $p-y: calc(#{$section-margin} / 2 );
+
 
     &:not(:first-child) {
-      padding-top: calc(#{$section-margin} / 2 );
+      padding-top: $p-y;
     }
 
     &:not(:last-child) {
-      padding-bottom: calc(#{$section-margin} / 2 );
-
+      padding-bottom: $p-y;
       border-bottom: solid $bg-secondary 2px;
       // border-bottom: solid $text-grey-light 2px;
     }

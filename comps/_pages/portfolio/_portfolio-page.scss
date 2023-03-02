@@ -6,10 +6,11 @@
 main#portfolio.page {
 
   @import 'comps/_pages/_home/2_projects.scss';
+  @import 'comps/_pages/portfolio/mini-projects.scss';
 
   section {
-    margin-top:   calc(#{$section-margin} / 2);
-    margin-bottom: calc(#{$section-margin} / 2);
+    margin-top:    calc(#{$section-margin} / 2);// !important;
+    margin-bottom: calc(#{$section-margin} / 2);// !important;
   }
 
 }

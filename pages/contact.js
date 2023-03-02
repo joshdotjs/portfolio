@@ -1,5 +1,5 @@
 import Layout from "comps/_layout/_layout";
-import Page from "comps/_pages/contact/contact-page";
+import Page from "comps/_pages/contact/_contact-page";
 
 // ==============================================
 

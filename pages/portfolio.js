@@ -1,5 +1,5 @@
 import Layout from "comps/_layout/_layout";
-import Page from 'comps/_pages/portfolio/portfolio-page';
+import Page from 'comps/_pages/portfolio/_portfolio-page';
 
 // ==============================================
 

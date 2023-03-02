@@ -1,0 +1,103 @@
+@use 'css/partials/vars' as *;
+@use 'css/partials/mixins' as *;
+@use 'css/partials/breakpoints' as *;
+
+section#mini-projects {
+  color: black;
+
+  // ============================================
+  
+  @include xxl_ { padding: 0 $gutter; }
+  @include xxl  { @include max-width; }
+  
+  // ============================================
+
+  h2 {
+    font-size: $fs-700;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+
+  // ============================================
+
+  .mini-projects-container {
+
+    padding: $pad;
+    
+    display: grid;
+    gap: 1rem;
+    
+    
+    grid-template-columns: repeat(1, 1fr);
+    
+    // ============================================
+    
+    .mini-projects-row {
+      // background: rgba(0, 0, 0, 0.2);
+      
+      display: flex;
+      align-items: center;
+
+      // ----------------------------------------
+      
+      img.left { //background: lightgreen;
+        height: 30px;
+
+        margin-right: 1rem;
+      }
+
+      // ----------------------------------------
+      
+      .right { 
+        //background: tomato;
+        
+
+        h5 {
+          font-size: $fs-450;
+          font-weight: 500;
+          margin-bottom: 0.3rem;
+        }
+
+        ul {
+          color: $text-grey-light;
+          display: flex;
+          align-items: center;
+          li {
+            // background: orange;
+            list-style: none;
+            display: flex;
+            line-height: 1;
+            font-size: $fs-400;
+            
+            &:not(:last-child) {
+              $m-y: 1rem;
+              margin-right: $m-y;
+              
+              span {
+                border-right: solid $text-grey-light 2px;
+                margin-left: $m-y;
+              }
+              
+            }
+          }
+        }
+      }
+      
+      // ----------------------------------------
+
+      $p-y: calc(#{$section-margin} / 4 );
+
+      // &:not(:first-child) {
+      //   padding-top: $p-y;
+      // }
+      &:not(:last-child) {
+        padding-bottom: $p-y;
+        border-bottom: solid $bg-secondary 2px;
+        // border-bottom: solid $text-grey-light 2px;
+      }
+
+      // ----------------------------------------
+    }
+  }
+  
+}
