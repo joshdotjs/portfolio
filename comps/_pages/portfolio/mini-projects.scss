@@ -4,6 +4,7 @@
 
 section#mini-projects {
   color: black;
+  
 
   // ============================================
   
@@ -23,6 +24,7 @@ section#mini-projects {
   .mini-projects-container {
 
     padding: $pad;
+    border-radius: 5px;
     
     display: grid;
     gap: 1rem;

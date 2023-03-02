@@ -39,7 +39,7 @@ export default function MiniProjects() {
   return (
     <section id="mini-projects">
 
-      <h2>Mini Projects</h2>
+      <h2>Mini Projects <span style={{ fontSize: '1rem' }} >😁 Coming soon! 😁</span></h2>
 
       <div className="mini-projects-container shadow">
         {
