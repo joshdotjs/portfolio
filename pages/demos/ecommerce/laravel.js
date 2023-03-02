@@ -1,5 +1,7 @@
 import Layout from "comps/_layout/_layout";
-import Page from "comps/_pages/demos/ecommerce/laravel";
+import Project from "comps/project/project";
+
+import projects from "data/projects";
 
 // ==============================================
 
@@ -9,7 +11,7 @@ export default function eCommerceDemoVideoPage() {
 
   return (
     <Layout id="videos--ecommerce">
-      <Page />
+      <Project project={projects[0]} />
     </Layout>
   );
 

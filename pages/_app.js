@@ -15,9 +15,6 @@ import 'comps/_pages/contact/_contact-page.scss';
 import 'comps/button/button.scss';
 import 'comps/project/project.scss';
 
-// TO DELETE - merge with projects.scss
-import 'pages/videos/ecommerce/2023.scss';
-
 // ==============================================
 
 export default function App({ Component, pageProps }) {

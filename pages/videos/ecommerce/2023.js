@@ -8,8 +8,8 @@ export default function eCommerceDemoVideoPage() {
   // --------------------------------------------
 
   return (
-    <Layout id="videos--ecommerce">
-      <section>
+    <Layout>
+      <section className="project">
 
           <iframe 
             // width="560" 
