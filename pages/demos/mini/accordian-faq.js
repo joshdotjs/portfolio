@@ -9,7 +9,7 @@ export default function MiniDemo() {
 
   return (
     <Layout>
-      <MiniProject idx={0} allow_mobile_embedded={false} />
+      <MiniProject idx={1} />
     </Layout>
   );
 

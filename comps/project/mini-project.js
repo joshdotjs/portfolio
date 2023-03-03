@@ -13,7 +13,9 @@ export default function MiniProject({ idx, allow_mobile_embedded=true }) {
   return (
     <div className="mini-project">
 
-      <div className={`demo-container shadow ${allow_mobile_embedded ? 'xxl-block' : ''}`}>
+      {/* ----------------------------------- */}
+
+      <div className={`demo-container shadow ${allow_mobile_embedded ? '' : 'xxl-block'}`}>
         <iframe 
           src={links.demo} 
           // title="YouTube video player" 
@@ -22,11 +24,24 @@ export default function MiniProject({ idx, allow_mobile_embedded=true }) {
           // allowFullScreen
         ></iframe>
       </div>
+      
+      {/* ----------------------------------- */}
+
+      {/* { 
+        links.sandbox && 
+          <div className="demo-container shadow">
+            {links.sandbox}
+          </div>
+      } */}
+
+      {/* ----------------------------------- */}
 
       <div className="btn-container">
         <Button variant="full" color="dark" href={links.demo} >Live Demo</Button>
         <Button variant="empty" color="dark" href={links.code}>Code</Button>
       </div>
+
+      {/* ----------------------------------- */}
 
       {/* <ul className="techs">
         {
@@ -42,6 +57,8 @@ export default function MiniProject({ idx, allow_mobile_embedded=true }) {
           })
         }
       </ul> */}
+
+      {/* ----------------------------------- */}
 
     </div>
   );
