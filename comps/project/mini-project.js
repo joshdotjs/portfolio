@@ -13,16 +13,14 @@ export default function MiniProject({ idx }) {
   return (
     <div className="project">
 
-<iframe
-      src='https://react-clone-demo.netlify.app'
-      className='h-[700px] sm:h-[700px]'
-      style={{
-        width: '100%',
-        border: 0,
-        borderRadius: '4px',
-        overflow: 'hidden',
-      }}
-    ></iframe>
+      <iframe 
+        src={links.demo} 
+        // title="YouTube video player" 
+        frameBorder="0" 
+        // allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        // allowFullScreen
+        className="shadow"
+      ></iframe>
 
 
 
