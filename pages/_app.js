@@ -14,6 +14,7 @@ import 'comps/_pages/contact/_contact-page.scss';
 // Comps:
 import 'comps/button/button.scss';
 import 'comps/project/project.scss';
+import 'comps/project/mini-project.scss';
 
 // ==============================================
 

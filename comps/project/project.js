@@ -1,15 +1,23 @@
 import Button from "comps/button/button";
 
+import projects from "data/projects";
+
 // ==============================================
 
-export default function Project({ project }) {
+export default function Project({ idx }) {
+
+  // --------------------------------------------
+
+  const { links, bullets } = projects[idx];
+
+  // --------------------------------------------
 
   return (
     <div className="project">
       { 
-        project.links?.youtube && (
+        links?.youtube && (
           <iframe 
-            src={project.links.youtube} 
+            src={links.youtube} 
             title="YouTube video player" 
             frameBorder="0" 
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
@@ -20,18 +28,18 @@ export default function Project({ project }) {
 
       <div className="btn-container">
         {/* <Button variant="full"  color="dark" href='/demos/ecommerce/laravel'>Summary</Button> */}
-        <Button variant="full" color="dark" href={project.links.demo} >Live Demo</Button>
-        <Button variant="empty" color="dark" href={project.links.code}>Code</Button>
+        <Button variant="full" color="dark" href={links.demo} >Live Demo</Button>
+        <Button variant="empty" color="dark" href={links.code}>Code</Button>
       </div>
 
 
       { 
-        project?.bullets && (
+        bullets && (
           <ul className="bullets">
             {
-              project?.bullets.map((bullet, idx) => {
+              bullets.map((bullet, jdx) => {
                 
-                const key = `${project.id}-bullet-${idx}`;
+                const key = `project-${idx}-bullet-${jdx}`;
 
                 return (
                   <li key={key}>{bullet}</li>

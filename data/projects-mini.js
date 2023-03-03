@@ -1,6 +1,7 @@
 // ==============================================
 
 const mini_projects = [
+  // --------------------------------------------
   {
     img: '',
     title: 'Parallax Landing Page',
@@ -22,12 +23,14 @@ const mini_projects = [
       code:    'https://github.com/joshdotjs/mini-demos/tree/main/00-parallax-landing-page',
       demo:    'https://react-clone-demo.netlify.app',
       // sandbox: '',
+      page: '/demos/mini/parallax-landing-page',
     },
     bullets: [
       ``,
     ],
     techs: ['React', 'GSAP', 'SASS'],
   },
+  // --------------------------------------------
   {
     img: '',
     title: 'Accordian FAQ',
@@ -49,12 +52,14 @@ const mini_projects = [
       code:    'https://github.com/joshdotjs/mini-demos/tree/main/01-accordian-faq',
       demo:    'https://mini-demo-accordian.netlify.app/',
       // sandbox: '',
+      page: '/demos/mini/accordian-faq',
     },
     bullets: [
       ``,
     ],
     techs: ['React', 'GSAP', 'SASS'],
   },
+  // --------------------------------------------
   {
     img: '',
     title: 'NFT Preview Card',
@@ -76,13 +81,15 @@ const mini_projects = [
       code:    'https://github.com/joshdotjs/mini-demos/tree/main/03-nft-card',
       demo:    'https://frontend-mentor-6-nft-preview-card-component.netlify.app',
       sandbox: 'https://codesandbox.io/s/frontend-mentor-6--nft-preview-card-component-2-4o0fj9',
-      sandbox_embed: 'https://codesandbox.io/embed/frontend-mentor-6--nft-preview-card-component-2-4o0fj9?fontsize=14&hidenavigation=1&module=%2Fsrc%2Fapp.js&theme=dark&view=editor'
+      sandbox_embed: 'https://codesandbox.io/embed/frontend-mentor-6--nft-preview-card-component-2-4o0fj9?fontsize=14&hidenavigation=1&module=%2Fsrc%2Fapp.js&theme=dark&view=editor',
+      page: '/demos/mini/nft-card',
     },
     bullets: [
       ``,
     ],
     techs: ['React', 'GSAP', 'SASS'],
   },
+  // --------------------------------------------
 ];
 
 // ==============================================

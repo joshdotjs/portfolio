@@ -10,7 +10,11 @@ const Card = ({ project, idx })  => {
   const { id, className, title, title_mobile, description, icon, img, logos, links, techs } = project;
 
   return (
-    <div id={id} className={`mini-projects-row ${className}`}>
+    <Button 
+      href={links.page}
+      style={false}
+      className={`mini-projects-row ${className}`}
+    >
 
       <img src={logos[0]} className="left" />
 
@@ -22,16 +26,17 @@ const Card = ({ project, idx })  => {
             const key = `mini-project-${idx}--tech-${jdx}`;
             return (
               <Fragment key={key}>
-                <li>{tech}<span></span></li>
+                <li>
+                  {tech}<span></span>
+                </li>
               </Fragment>
             );
           }) }
         </ul>
       </div>
-    </div>  
+    </Button>  
   );
 };
-
 
 // ==============================================
 

@@ -1,7 +1,5 @@
 import Layout from "comps/_layout/_layout";
-import MiniProject from "comps/project/project-mini";
-
-import mini_projects from "data/projects-mini";
+import MiniProject from "comps/project/mini-project";
 
 // ==============================================
 
@@ -13,7 +11,7 @@ export default function MiniDemo() {
     <Layout 
       // id="mini-demos--parallax-landing-page"
     >
-      <MiniProject mini_project={mini_projects[1]} />
+      <MiniProject idx={0} />
     </Layout>
   );
 
