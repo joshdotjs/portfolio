@@ -11,16 +11,17 @@ export default function MiniProject({ idx }) {
   console.log('links: ', links);
 
   return (
-    <div className="project">
+    <div className="mini-project">
 
-      <iframe 
-        src={links.demo} 
-        // title="YouTube video player" 
-        frameBorder="0" 
-        // allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-        // allowFullScreen
-        className="shadow"
-      ></iframe>
+      <div className="demo-container shadow">
+        <iframe 
+          src={links.demo} 
+          // title="YouTube video player" 
+          frameBorder="0" 
+          // allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+          // allowFullScreen
+        ></iframe>
+      </div>
 
 
 
