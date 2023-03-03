@@ -25,10 +25,10 @@ export default function MiniProject({ idx }) {
 
 
 
-      {/* <div className="btn-container">
+      <div className="btn-container">
         <Button variant="full" color="dark" href={links.demo} >Live Demo</Button>
         <Button variant="empty" color="dark" href={links.code}>Code</Button>
-      </div> */}
+      </div>
 
 
       {/* <ul className="techs">
