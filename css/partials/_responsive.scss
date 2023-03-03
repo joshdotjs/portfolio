@@ -13,6 +13,11 @@
   @include xxl { display: inline; }
 }
 
+.xxl-block {
+  @include xxl_ { @include d-none; }
+  @include xxl { display: block; }
+}
+
 // ==============================================
 
 .xl-inline {

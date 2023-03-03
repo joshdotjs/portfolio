@@ -4,7 +4,7 @@ import mini_projects from "data/projects-mini";
 
 // ==============================================
 
-export default function MiniProject({ idx }) {
+export default function MiniProject({ idx, allow_mobile_embedded=true }) {
 
   const { links, techs } = mini_projects[idx];
 
@@ -13,7 +13,7 @@ export default function MiniProject({ idx }) {
   return (
     <div className="mini-project">
 
-      <div className="demo-container shadow">
+      <div className={`demo-container shadow ${allow_mobile_embedded ? 'xxl-block' : ''}`}>
         <iframe 
           src={links.demo} 
           // title="YouTube video player" 
