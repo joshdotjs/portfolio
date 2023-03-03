@@ -29,6 +29,7 @@ const mini_projects = [
       ``,
     ],
     techs: ['React', 'GSAP', 'SASS'],
+    coming_soon: false,
   },
   // --------------------------------------------
   {
@@ -58,6 +59,7 @@ const mini_projects = [
       ``,
     ],
     techs: ['React', 'GSAP', 'SASS'],
+    coming_soon: true,
   },
   // --------------------------------------------
   {
@@ -88,6 +90,7 @@ const mini_projects = [
       ``,
     ],
     techs: ['React', 'GSAP', 'SASS'],
+    coming_soon: true,
   },
   // --------------------------------------------
 ];

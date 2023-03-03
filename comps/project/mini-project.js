@@ -23,13 +23,10 @@ export default function MiniProject({ idx, allow_mobile_embedded=true }) {
         ></iframe>
       </div>
 
-
-
       <div className="btn-container">
         <Button variant="full" color="dark" href={links.demo} >Live Demo</Button>
         <Button variant="empty" color="dark" href={links.code}>Code</Button>
       </div>
-
 
       {/* <ul className="techs">
         {

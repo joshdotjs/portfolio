@@ -7,7 +7,7 @@ import mini_projects from "data/projects-mini";
 
 const Card = ({ project, idx })  => {
 
-  const { id, className, title, title_mobile, description, icon, img, logos, links, techs } = project;
+  const { id, className, title, title_mobile, description, icon, img, logos, links, techs, coming_soon } = project;
 
   return (
     <Button 
@@ -19,7 +19,13 @@ const Card = ({ project, idx })  => {
       <img src={logos[0]} className="left" />
 
       <div className="right">
-        <h5>{title}</h5>
+        <h5>
+          {title}
+        </h5>
+
+        { 
+          coming_soon && <h6 > 😁 Coming soon! 😁</h6>
+        }
 
         <ul>
           { techs?.map((tech, jdx) => {
@@ -44,7 +50,7 @@ export default function MiniProjects() {
   return (
     <section id="mini-projects">
 
-      <h2>Mini Projects <span style={{ fontSize: '0.9rem' }} >😁 Coming soon! 😁</span></h2>
+      <h2>Mini Projects</h2>
 
       <div className="mini-projects-container shadow">
         {

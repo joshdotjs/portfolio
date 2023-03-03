@@ -8,9 +8,7 @@ export default function MiniDemo() {
   // --------------------------------------------
 
   return (
-    <Layout 
-      // id="mini-demos--parallax-landing-page"
-    >
+    <Layout>
       <MiniProject idx={0} />
     </Layout>
   );

@@ -60,6 +60,12 @@ section#mini-projects {
           margin-bottom: 0.3rem;
         }
 
+        h6 {
+          font-size: $fs-400;
+          font-weight: 400;
+          margin-bottom: 0.65rem;
+        }
+
         ul {
           color: $text-grey-light;
           display: flex;
