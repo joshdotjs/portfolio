@@ -38,6 +38,12 @@
   @include lg { display: inline-block; }
 }
 
+.lg-inline {
+  @include md_ { @include d-none; }
+  @include md { display: inline; }
+}
+
+
 .lg-flex {
   @include lg_ { @include d-none; }
   @include lg { display: flex; }
@@ -48,6 +54,10 @@
 .md-inline-block {
   @include md_ { @include d-none; }
   @include md { display: inline-block; }
+}
+.md-inline {
+  @include md_ { @include d-none; }
+  @include md { display: inline; }
 }
 
 // ==============================================
@@ -66,3 +76,5 @@
   @include sm_ { display: inline; }
   @include sm { @include d-none; }
 }
+
+// ==============================================
