@@ -61,3 +61,8 @@
   @include sm_ { @include d-none; }
   @include sm { display: inline; }
 }
+
+.sm_-inline {
+  @include sm_ { display: inline; }
+  @include sm { @include d-none; }
+}

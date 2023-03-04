@@ -41,6 +41,7 @@ export default function MiniProject({ idx, allow_mobile_embedded=true }) {
 
       <div className="btn-container">
         <Button variant="full" color="dark" href={links.demo} >Live Demo</Button>
+        { links.sandbox && <Button variant="empty" color="dark" href={links.sandbox} className="sm-inline">Editable Code</Button> }
         <Button variant="empty" color="dark" href={links.code}>Code</Button>
       </div>
 
