@@ -53,14 +53,7 @@ const mini_projects = [
       code:    'https://github.com/joshdotjs/mini-demos/tree/main/01-accordian-faq',
       demo:    'https://mini-demo-accordian.netlify.app/',
       page: '/demos/mini/accordian-faq',
-      sandbox: (
-        <iframe src="https://codesandbox.io/embed/charming-gauss-y7ny90?fontsize=14&hidenavigation=1&module=%2Fsrc%2FApp.js&theme=dark&view=editor"
-          style={{width:'100%', height:'500px', border:0, borderRadius: '4px', overflow:'hidden'}}          
-          title="charming-gauss-y7ny90"
-          allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
-          sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
-        ></iframe>
-      ),
+      sandbox: 'https://codesandbox.io/embed/accordian-faq-y7ny90?fontsize=14&hidenavigation=1&module=%2Fsrc%2FApp.js&theme=dark&view=editor',
     },
     bullets: [
       ``,

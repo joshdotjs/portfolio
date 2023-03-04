@@ -27,12 +27,15 @@ export default function MiniProject({ idx, allow_mobile_embedded=true }) {
       
       {/* ----------------------------------- */}
 
-      {/* { 
+      { 
         links.sandbox && 
           <div className="demo-container shadow">
-            {links.sandbox}
+            <iframe 
+              src={links.sandbox} 
+              frameBorder="0" 
+            ></iframe>
           </div>
-      } */}
+      }
 
       {/* ----------------------------------- */}
 
