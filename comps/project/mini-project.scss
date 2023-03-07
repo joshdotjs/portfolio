@@ -1,5 +1,6 @@
 @use 'css/partials/vars' as *;
 @use 'css/partials/mixins' as *;
+@use 'css/partials/breakpoints' as *;
 
 // ==============================================
 
@@ -10,9 +11,13 @@
     
     // border: solid yellow 10px;
     // max-height: 100%;
-    @include xxl_ {
+    @include sm_ {
+      padding: 0;
+    }
+    @media (min-width: #{$sm}) and (max-width: #{$xxl}) {
       padding: 0 $gutter;
     }
+
     @include xxl {
       @include max-width;
     }
@@ -23,8 +28,9 @@
     // ----------------------------------------
 
     .demo-container {
-    
+
       padding: $pad;
+
       margin-bottom: $pad;
       border-radius: $rad-sm;
 
