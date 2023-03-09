@@ -5,7 +5,7 @@ const skills = [
     // id: 'skill-8',
     title: 'JavaScript',
     description: [
-      `Vanilla JavaScript, TypeScript, and ES6+`,
+      `Vanilla JavaScript (ES6+) and TypeScript`,
       `Both frontend and backend (Node)`
     ],
     logo: '/logos/js.svg',
