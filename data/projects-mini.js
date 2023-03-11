@@ -64,8 +64,8 @@ const mini_projects = [
   // --------------------------------------------
   {
     img: '',
-    title: 'NFT Preview Card',
-    title_mobile: 'NFT Card',
+    title: 'CRUD App',
+    title_mobile: 'CRUD',
     description: [
       ``,
     ],
@@ -80,11 +80,17 @@ const mini_projects = [
       '/logos/sass.svg',
     ],
     links: {
-      code:    'https://github.com/joshdotjs/mini-demos/tree/main/03-nft-card',
-      demo:    'https://frontend-mentor-6-nft-preview-card-component.netlify.app',
-      sandbox: 'https://codesandbox.io/s/frontend-mentor-6--nft-preview-card-component-2-4o0fj9',
+      code:    { 
+        frontend: 'https://github.com/joshdotjs/sandbox-frontend',
+        backend: 'https://github.com/joshdotjs/sandbox-backend',
+      },
+      demo:    'https://sandbox-frontend-liard.vercel.app/',
+      sandbox: {
+        frontend: 'https://codesandbox.io/p/sandbox/sandbox-frontend-forked-4b6yov',
+        backend: 'https://codesandbox.io/p/github/joshdotjs/sandbox-backend/main',
+      },
       sandbox_embed: 'https://codesandbox.io/embed/frontend-mentor-6--nft-preview-card-component-2-4o0fj9?fontsize=14&hidenavigation=1&module=%2Fsrc%2Fapp.js&theme=dark&view=editor',
-      page: '/demos/mini/nft-card',
+      page: '/demos/mini/CRUD',
     },
     bullets: [
       ``,
