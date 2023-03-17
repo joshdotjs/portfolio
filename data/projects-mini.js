@@ -86,7 +86,7 @@ const mini_projects = [
       },
       demo:    'https://sandbox-frontend-liard.vercel.app/',
       sandbox: {
-        frontend: 'https://codesandbox.io/p/sandbox/sandbox-frontend-forked-4b6yov',
+        frontend: 'https://codesandbox.io/p/sandbox/sandbox-frontend-forked-n2wp0c',
         backend: 'https://codesandbox.io/p/github/joshdotjs/sandbox-backend/main',
       },
       sandbox_embed: 'https://codesandbox.io/embed/frontend-mentor-6--nft-preview-card-component-2-4o0fj9?fontsize=14&hidenavigation=1&module=%2Fsrc%2Fapp.js&theme=dark&view=editor',
