@@ -86,7 +86,7 @@ const mini_projects = [
       },
       demo:    'https://sandbox-frontend-liard.vercel.app/',
       sandbox: {
-        frontend: 'https://codesandbox.io/p/sandbox/sandbox-frontend-forked-n2wp0c',
+        frontend: 'https://codesandbox.io/p/github/joshdotjs/sandbox-frontend/main?file=%2Fsrc%2FApp.js',
         // backend: 'https://codesandbox.io/p/github/joshdotjs/sandbox-backend/main',
         backend: 'https://codesandbox.io/p/github/joshdotjs/sandbox-backend/main?file=%2Findex.js',
       },
