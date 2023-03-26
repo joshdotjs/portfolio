@@ -13,7 +13,7 @@ const Card = ({ project, idx })  => {
     <Button 
       href={links.page}
       style={false}
-      className={`mini-projects-row ${className}`}
+      className={`mini-projects-row ${className} ${coming_soon && 'disable'}`}
     >
 
       <img src={logos[0]} className="left" />
